@@ -8,7 +8,7 @@
   
 <h2>Features & Requirements</h2>
 
-<h3><b>Essential Views and Features</b></h3><br>
+<h3>**Essential Views and Features**</h3>
 <h3>Main view</h3>
 ● Returns a list of ALL movies to the user (each listed item with an image, title, and
 description)
@@ -32,7 +32,7 @@ description)
 ● Allows existing users to deregister
 ● Displays favorite movies
 ● Allows users to remove a movie from their list of favorites
-<h3><b>Optional Views and Features</b></h3><br>
+<h3>**Optional Views and Features**</h3>
 <h3>Single movie view and all movies views</h3>
 ● Allow users to see which actors star in which movies
 ● Allow users to view more information about different movies, such as the release date
