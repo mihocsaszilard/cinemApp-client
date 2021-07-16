@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>myFlix</title>
-  <link rel="stylesheet" href="/src.78399e21.css"></head>
+  </head>
   <body>
     <!-- // For all the tasks in this Achievement, you will create a new GitHub branch 
 // from your “myFlix-client” repo. In the development world it's generally best
@@ -10,6 +10,6 @@
 //  master/main branch after successful verification. Developers often follow 
 //  this practice in their workplace. -->
     <div class="app-container"></div>
-    <script src="/src.78399e21.js"></script>
+    <script src="ba52405b23f1ffb73d1c04c33e81fe6d"></script>
   </body>
 </html>
