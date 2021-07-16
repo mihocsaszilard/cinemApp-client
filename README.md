@@ -9,37 +9,37 @@
 <h2>Features & Requirements</h2>
 
 <h3><bold>Essential Views and Features<bold></h3>
-<h2>Main view</h2>
+<h4>Main view</h4>
 ● Returns a list of ALL movies to the user (each listed item with an image, title, and
 description)<br>
 ● Sorting and filtering<br>
 ● Ability to select a movie for more details<br>
-<h2>Single movie view</h2>
+<h4>Single movie view</h4>
 ● Returns data (description, genre, director, image) about a single movie to the user<br>
 ● Allows users to add a movie to their list of favorites<br>
-<h2>Login view</h2>
+<h4>Login view</h4>
 ● Allows users to log in with a username and password<br>
-<h2>Registration view<h2>
+<h4>Registration view<h4>
 ● Allows new users to register (username, password, email, birthday)<br>
-<h2>Genre view</h2>
+<h4>Genre view</h4>
 ● Returns data about a genre, with a name and description<br>
 ● Displays example movies<br>
-<h2>Director view</h2>
+<h4>Director view</h4>
 ● Returns data about a director (name, bio, birth year, death year)<br>
 ● Displays example movies<br>
-<h2>Profile view</h2>
+<h4>Profile view</h4>
 ● Allows users to update their user info (username, password, email, date of birth)<br>
 ● Allows existing users to deregister<br>
 ● Displays favorite movies<br>
 ● Allows users to remove a movie from their list of favorites<br>
 <h3>Optional Views and Features</h3>
-<h2>Single movie view and all movies views</h2>
+<h4>Single movie view and all movies views</h4>
 ● Allow users to see which actors star in which movies<br>
 ● Allow users to view more information about different movies, such as the release date
 and the movie rating<br>
-<h2>Actors view</h2>
+<h4>Actors view</h4>
 ● Allows users to view information about different actors<br>
-<h2>Profile view, single movie view, and all movies view</h2>
+<h4>Profile view, single movie view, and all movies view</h4>
 ● Allow users to create a “To Watch” list in addition to their “Favorite Movies” list<br>
 
 <h2>Technical Requirements</h2>
