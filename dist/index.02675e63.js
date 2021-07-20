@@ -26458,7 +26458,8 @@ try {
       Description: _propTypesDefault.default.string.isRequired,
       ImgPath: _propTypesDefault.default.string.isRequired,
       Genre: _propTypesDefault.default.array.isRequired,
-      Director: _propTypesDefault.default.array.isRequired
+      Director: _propTypesDefault.default.array.isRequired,
+      Actors: _propTypesDefault.default.array.isRequired
     }).isRequired,
     onMovieClick: _propTypesDefault.default.func.isRequired
   };
@@ -27616,14 +27617,38 @@ try {
             lineNumber: 28,
             columnNumber: 11
           }
-        }, movie.Director)), /*#__PURE__*/_reactDefault.default.createElement("button", {
+        }, movie.Director)), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "movie-actors",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 30,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("span", {
+          className: "label",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 31,
+            columnNumber: 11
+          }
+        }, "Actors: "), /*#__PURE__*/_reactDefault.default.createElement("span", {
+          className: "value",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 32,
+            columnNumber: 11
+          }
+        }, movie.Actors)), /*#__PURE__*/_reactDefault.default.createElement("button", {
           onClick: () => {
             onBackClick(null);
           },
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 30,
+            lineNumber: 34,
             columnNumber: 9
           }
         }, "Back"))

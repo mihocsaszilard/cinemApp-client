@@ -41,7 +41,7 @@
 108C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\@babel\plugin-proposal-dynamic-import\lib\index.js121012626000000000 0
 123C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\postcss-minify-gradients\node_modules\supports-color\package.json121436361000000000 0
 73C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\lodash\fp\__.js121436361000000000 0
-100C:\Users\mihoc\careerfoundry\cinemApp-client\src\components\registration-view\registration-view.scss132712536678070484 0
+100C:\Users\mihoc\careerfoundry\cinemApp-client\src\components\registration-view\registration-view.scss132712609059136487 0
 96C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\postcss-colormin\node_modules\has-flag132712404107837371 1
 134C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\stylehacks\node_modules\postcss-selector-parser\postcss-selector-parser.d.ts121436361000000000 0
 116C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\css-declaration-sorter\node_modules\color-convert\index.js121436361000000000 0
@@ -84,7 +84,7 @@
 105C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\expand-brackets\node_modules\debug\src\index.js131505605660000000 0
 84C:\Users\mihoc\careerfoundry\cinemApp-client\src\components\main-view\main-view.scss132712536678050479 0
 103C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\caniuse-lite\data\features\rest-parameters.js121436361000000000 0
-49C:\Users\mihoc\careerfoundry\cinemApp-client\dist132712604325728133 1
+49C:\Users\mihoc\careerfoundry\cinemApp-client\dist132712620182303509 1
 106C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\postcss-minify-gradients\node_modules\source-map132712404125617372 1
 55C:\Users\mihoc\careerfoundry\cinemApp-client\.gitignore132712404677520510 0
 101C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\@parcel\core\test\fixtures\config\subfolder132712404196057581 1
@@ -190,7 +190,7 @@
 70C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\util\LICENSE121436361000000000 0
 127C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\postcss-normalize-charset\node_modules\source-map\lib\mapping-list.js131369414910000000 0
 88C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\core-js\features\math\index.js121436361000000000 0
-99C:\Users\mihoc\careerfoundry\cinemApp-client\src\components\registration-view\registration-view.jsx132712599553815713 0
+99C:\Users\mihoc\careerfoundry\cinemApp-client\src\components\registration-view\registration-view.jsx132712609263399687 0
 68C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\prelude-ls132712404119127383 1
 91C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\request-promise-core\package.json121436361000000000 0
 81C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\path-browserify\.github132712404173917387 1
@@ -290,7 +290,7 @@
 117C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\regenerate-unicode-properties\Script_Extensions\Buginese.js121436361000000000 0
 65C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\@parcel132712405535235285 1
 77C:\Users\mihoc\careerfoundry\cinemApp-client\src\components\registration-view132712536678070484 1
-83C:\Users\mihoc\careerfoundry\cinemApp-client\src\components\main-view\main-view.jsx132712604322888251 0
+83C:\Users\mihoc\careerfoundry\cinemApp-client\src\components\main-view\main-view.jsx132712620180918648 0
 82C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\util-deprecate\README.md130614195410000000 0
 121C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\postcss-normalize-whitespace\node_modules\postcss\lib\result.js121436361000000000 0
 79C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\indexes-of\.npmignore130291287040000000 0
@@ -300,7 +300,7 @@
 118C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\postcss-ordered-values\node_modules\postcss\lib\warn-once.js121436361000000000 0
 66C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\inflight132712404131787372 1
 75C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\fastq\example.mjs121436361000000000 0
-85C:\Users\mihoc\careerfoundry\cinemApp-client\src\components\movie-card\movie-card.jsx132712595721168967 0
+85C:\Users\mihoc\careerfoundry\cinemApp-client\src\components\movie-card\movie-card.jsx132712618366820615 0
 133C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\postcss-normalize-whitespace\node_modules\postcss\docs\guidelines\runner.md121436361000000000 0
 86C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\type-check\lib\parse-type.js130958412080000000 0
 81C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\node-forge\lib\baseN.js121436361000000000 0
@@ -11578,7 +11578,7 @@
 80C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\map-visit\package.json131362477870000000 0
 108C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\jsdom\lib\jsdom\living\events\MessageEvent-impl.js121436361000000000 0
 131C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\postcss-minify-font-values\node_modules\postcss-value-parser\lib\parse.js121436361000000000 0
-72C:\Users\mihoc\careerfoundry\cinemApp-client\dist\index.17951e9a.css.map132712604325648132 0
+72C:\Users\mihoc\careerfoundry\cinemApp-client\dist\index.17951e9a.css.map132712620182223531 0
 89C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\caniuse-lite\data\regions\TR.js121436361000000000 0
 135C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\postcss-minify-font-values\node_modules\postcss-value-parser\lib\stringify.js121436361000000000 0
 130C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\postcss-minify-font-values\node_modules\postcss-value-parser\lib\walk.js121436361000000000 0
@@ -21900,10 +21900,10 @@
 68C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\.bin\which132712404204697374 0
 72C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\.bin\which.cmd132712404204697374 0
 72C:\Users\mihoc\careerfoundry\cinemApp-client\node_modules\.bin\which.ps1132712404204697374 0
-67C:\Users\mihoc\careerfoundry\cinemApp-client\dist\index.02675e63.js132712604325688136 0
-71C:\Users\mihoc\careerfoundry\cinemApp-client\dist\index.02675e63.js.map132712604325718146 0
+67C:\Users\mihoc\careerfoundry\cinemApp-client\dist\index.02675e63.js132712620182253703 0
+71C:\Users\mihoc\careerfoundry\cinemApp-client\dist\index.02675e63.js.map132712620182293508 0
 68C:\Users\mihoc\careerfoundry\cinemApp-client\dist\index.078cbf39.css132712586012511617 0
-68C:\Users\mihoc\careerfoundry\cinemApp-client\dist\index.17951e9a.css132712604325598153 0
+68C:\Users\mihoc\careerfoundry\cinemApp-client\dist\index.17951e9a.css132712620182163531 0
 68C:\Users\mihoc\careerfoundry\cinemApp-client\dist\index.778c89a2.css132712575908277810 0
 72C:\Users\mihoc\careerfoundry\cinemApp-client\dist\index.778c89a2.css.map132712575908307815 0
-60C:\Users\mihoc\careerfoundry\cinemApp-client\dist\index.html132712604325608143 0
+60C:\Users\mihoc\careerfoundry\cinemApp-client\dist\index.html132712620182163531 0
