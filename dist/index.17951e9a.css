@@ -1,9 +1,9 @@
 
-
 @import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;1,200&display=swap");
 *, body {
   font-family: "prompt";
 }
+
 *,
 body {
   box-sizing: border-box;
@@ -31,7 +31,6 @@ label,
   width: 100px;
   margin-top: 2%;
 }
-
 *,
 body {
   box-sizing: border-box;
@@ -59,6 +58,7 @@ label,
   width: 100px;
   margin-top: 2%;
 }
+
 .my-flix {
   color: coral;
 }

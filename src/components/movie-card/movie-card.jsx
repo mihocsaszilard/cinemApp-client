@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./movie-card.scss";
+import "../../settings/typography.scss";
 
 export class MovieCard extends React.Component {
   render() {

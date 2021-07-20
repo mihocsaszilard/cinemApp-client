@@ -26291,6 +26291,7 @@ try {
   var _loginViewLoginView = require("../login-view/login-view");
   var _registrationViewRegistrationView = require("../registration-view/registration-view");
   require("./main-view.scss");
+  require("../../settings/typography.scss");
   var _jsxFileName = "C:\\Users\\mihoc\\careerfoundry\\cinemApp-client\\src\\components\\main-view\\main-view.jsx";
   class MainView extends _reactDefault.default.Component {
     constructor() {
@@ -26341,7 +26342,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 65,
+            lineNumber: 66,
             columnNumber: 9
           }
         })
@@ -26354,7 +26355,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 73,
+            lineNumber: 74,
             columnNumber: 14
           }
         })
@@ -26366,7 +26367,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 76,
+            lineNumber: 77,
             columnNumber: 37
           }
         })
@@ -26377,7 +26378,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 79,
+            lineNumber: 80,
             columnNumber: 7
           }
         }, /*If the state of `selectedMovie` is not null, that selected movie
@@ -26390,7 +26391,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 84,
+            lineNumber: 85,
             columnNumber: 13
           }
         }) : movies.map(movie => /*#__PURE__*/_reactDefault.default.createElement(_movieCardMovieCard.MovieCard, {
@@ -26402,7 +26403,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 92,
+            lineNumber: 93,
             columnNumber: 15
           }
         })))
@@ -26416,7 +26417,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","../movie-card/movie-card":"7v6h3","../movie-view/movie-view":"3xBbr","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","axios":"7rA65","../login-view/login-view":"6M7fu","./main-view.scss":"3X8QW","../registration-view/registration-view":"7gvH2"}],"7v6h3":[function(require,module,exports) {
+},{"react":"3b2NM","../movie-card/movie-card":"7v6h3","../movie-view/movie-view":"3xBbr","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","axios":"7rA65","../login-view/login-view":"6M7fu","../registration-view/registration-view":"7gvH2","./main-view.scss":"3X8QW","../../settings/typography.scss":"51Krs"}],"7v6h3":[function(require,module,exports) {
 var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -26432,6 +26433,7 @@ try {
   var _propTypes = require("prop-types");
   var _propTypesDefault = _parcelHelpers.interopDefault(_propTypes);
   require("./movie-card.scss");
+  require("../../settings/typography.scss");
   var _jsxFileName = "C:\\Users\\mihoc\\careerfoundry\\cinemApp-client\\src\\components\\movie-card\\movie-card.jsx";
   class MovieCard extends _reactDefault.default.Component {
     render() {
@@ -26445,7 +26447,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 10,
+            lineNumber: 11,
             columnNumber: 7
           }
         }, movieData.Title)
@@ -26469,7 +26471,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","prop-types":"4dfy5","./movie-card.scss":"43n4t"}],"5gA8y":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","prop-types":"4dfy5","./movie-card.scss":"43n4t","../../settings/typography.scss":"51Krs"}],"5gA8y":[function(require,module,exports) {
 "use strict";
 
 exports.interopDefault = function (a) {
@@ -27478,7 +27480,7 @@ checkPropTypes.resetWarningCache = function () {
 };
 module.exports = checkPropTypes;
 
-},{"./lib/ReactPropTypesSecret":"3OVnw"}],"43n4t":[function() {},{}],"3xBbr":[function(require,module,exports) {
+},{"./lib/ReactPropTypesSecret":"3OVnw"}],"43n4t":[function() {},{}],"51Krs":[function() {},{}],"3xBbr":[function(require,module,exports) {
 var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -29494,11 +29496,11 @@ try {
   }
   _s(LoginView, "Lrw7JeD9zj6OUWhT/IH4OIvPKEk=");
   _c = LoginView;
-  LoginView.protoTypes = {
+  LoginView.propTypes = {
     user: _propTypesDefault.default.shape({
       username: _propTypesDefault.default.string.isRequired,
       password: _propTypesDefault.default.string.isRequired
-    }).isRequired,
+    }),
     onLoggedIn: _propTypesDefault.default.func.isRequired
   };
   var _c;
@@ -29509,7 +29511,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../../settings/typography.scss":"51Krs","./login-view.scss":"3ueKO","prop-types":"4dfy5"}],"51Krs":[function() {},{}],"3ueKO":[function() {},{}],"3X8QW":[function() {},{}],"7gvH2":[function(require,module,exports) {
+},{"react":"3b2NM","prop-types":"4dfy5","./login-view.scss":"3ueKO","../../settings/typography.scss":"51Krs","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3ueKO":[function() {},{}],"51Krs":[function() {},{}],"7gvH2":[function(require,module,exports) {
 var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -29525,6 +29527,7 @@ try {
   var _propTypes = require("prop-types");
   var _propTypesDefault = _parcelHelpers.interopDefault(_propTypes);
   require("./registration-view.scss");
+  require("../../settings/typography.scss");
   var _jsxFileName = "C:\\Users\\mihoc\\careerfoundry\\cinemApp-client\\src\\components\\registration-view\\registration-view.jsx", _s = $RefreshSig$();
   function RegistrationView(props) {
     _s();
@@ -29542,7 +29545,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19,
+          lineNumber: 20,
           columnNumber: 5
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -29550,7 +29553,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20,
+          lineNumber: 21,
           columnNumber: 7
         }
       }, "Username:", /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -29560,7 +29563,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22,
+          lineNumber: 23,
           columnNumber: 9
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -29568,7 +29571,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28,
+          lineNumber: 29,
           columnNumber: 7
         }
       }, "Password:", /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -29578,7 +29581,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30,
+          lineNumber: 31,
           columnNumber: 9
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -29586,7 +29589,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36,
+          lineNumber: 37,
           columnNumber: 7
         }
       }, "E-mail:", /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -29596,7 +29599,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38,
+          lineNumber: 39,
           columnNumber: 9
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("label", {
@@ -29604,7 +29607,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44,
+          lineNumber: 45,
           columnNumber: 7
         }
       }, "Birth date:", /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -29614,7 +29617,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46,
+          lineNumber: 47,
           columnNumber: 9
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("button", {
@@ -29624,7 +29627,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52,
+          lineNumber: 53,
           columnNumber: 7
         }
       }, "Register"))
@@ -29632,13 +29635,13 @@ try {
   }
   _s(RegistrationView, "RIZRq4jE1cgzcLOHGIpSeTDhd80=");
   _c = RegistrationView;
-  RegistrationView.protoTypes = {
+  RegistrationView.propTypes = {
     register: _propTypesDefault.default.shape({
       username: _propTypesDefault.default.string.isRequired,
       password: _propTypesDefault.default.string.isRequired,
       email: _propTypesDefault.default.string.isRequired,
       birthdate: _propTypesDefault.default.string.isRequired
-    }).isRequired,
+    }),
     onRegistration: _propTypesDefault.default.func.isRequired
   };
   var _c;
@@ -29649,6 +29652,6 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","./registration-view.scss":"22HWg","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","prop-types":"4dfy5"}],"22HWg":[function() {},{}],"5iJih":[function() {},{}]},["1j6wU","68WUB","1DVjT"], "1DVjT", "parcelRequire65a2")
+},{"react":"3b2NM","prop-types":"4dfy5","./registration-view.scss":"22HWg","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../../settings/typography.scss":"51Krs"}],"22HWg":[function() {},{}],"51Krs":[function() {},{}],"3X8QW":[function() {},{}],"51Krs":[function() {},{}],"5iJih":[function() {},{}]},["1j6wU","68WUB","1DVjT"], "1DVjT", "parcelRequire65a2")
 
 //# sourceMappingURL=index.02675e63.js.map

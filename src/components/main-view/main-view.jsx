@@ -7,6 +7,7 @@ import { LoginView } from "../login-view/login-view";
 import { RegistrationView } from "../registration-view/registration-view";
 
 import "./main-view.scss";
+import "../../settings/typography.scss";
 
 class MainView extends React.Component {
   constructor() {
