@@ -5,7 +5,8 @@
   "main": "src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel src/index.html"
+    "dev": "parcel src/index.html",
+    "pver": "parcel --version"
   },
   "repository": {
     "type": "git",
@@ -18,13 +19,11 @@
   },
   "homepage": "https://github.com/mihocsaszilard/cinemApp-client#readme",
   "dependencies": {
-    "bundler": "^0.8.0",
-    "parcel": "^2.0.0-beta.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.0.0-beta.3.1",
-    "parcel-bundler": "^1.12.5"
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "parcel": "^2.0.0-beta.2"
   }
 }
