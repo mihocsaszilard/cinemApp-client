@@ -26459,8 +26459,8 @@ try {
       Title: _propTypesDefault.default.string.isRequired,
       Description: _propTypesDefault.default.string.isRequired,
       ImgPath: _propTypesDefault.default.string.isRequired,
-      Genre: _propTypesDefault.default.array.isRequired,
-      Director: _propTypesDefault.default.array.isRequired,
+      Genre: _propTypesDefault.default.string.isRequired,
+      Director: _propTypesDefault.default.string.isRequired,
       Actors: _propTypesDefault.default.array.isRequired
     }).isRequired,
     onMovieClick: _propTypesDefault.default.func.isRequired
@@ -27493,9 +27493,20 @@ try {
   });
   var _react = require("react");
   var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _axios = require("axios");
+  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
   require("./movie-view.scss");
   var _jsxFileName = "C:\\Users\\mihoc\\careerfoundry\\cinemApp-client\\src\\components\\movie-view\\movie-view.jsx";
   class MovieView extends _reactDefault.default.Component {
+    componentDidMount() {
+      _axiosDefault.default.get("https://cinemapp-backend.herokuapp.com/genres").then(response => {
+        this.setState({
+          genres: response.data
+        });
+      }).catch(error => {
+        console.log(error);
+      });
+    }
     render() {
       const {movie, onBackClick} = this.props;
       return (
@@ -27504,7 +27515,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 10,
+            lineNumber: 24,
             columnNumber: 7
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -27512,7 +27523,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 11,
+            lineNumber: 25,
             columnNumber: 9
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("img", {
@@ -27520,128 +27531,136 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 12,
+            lineNumber: 26,
             columnNumber: 11
           }
         })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+          className: "movie-body",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 28,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("div", {
           className: "movie-title",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 14,
-            columnNumber: 9
+            lineNumber: 29,
+            columnNumber: 11
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("span", {
           className: "label",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 15,
-            columnNumber: 11
+            lineNumber: 30,
+            columnNumber: 13
           }
         }, "Title: "), /*#__PURE__*/_reactDefault.default.createElement("span", {
           className: "value",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 16,
-            columnNumber: 11
+            lineNumber: 31,
+            columnNumber: 13
           }
         }, movie.Title)), /*#__PURE__*/_reactDefault.default.createElement("div", {
           className: "movie-description",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 18,
-            columnNumber: 9
+            lineNumber: 33,
+            columnNumber: 11
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("span", {
           className: "label",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 19,
-            columnNumber: 11
+            lineNumber: 34,
+            columnNumber: 13
           }
         }, "Description: "), /*#__PURE__*/_reactDefault.default.createElement("span", {
           className: "value",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20,
-            columnNumber: 11
+            lineNumber: 35,
+            columnNumber: 13
           }
         }, movie.Description)), /*#__PURE__*/_reactDefault.default.createElement("div", {
           className: "movie-genre",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22,
-            columnNumber: 9
+            lineNumber: 37,
+            columnNumber: 11
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("span", {
           className: "label",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23,
-            columnNumber: 11
+            lineNumber: 38,
+            columnNumber: 13
           }
         }, "Genre: "), /*#__PURE__*/_reactDefault.default.createElement("span", {
           className: "value",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24,
-            columnNumber: 11
+            lineNumber: 39,
+            columnNumber: 13
           }
         }, movie.Genre)), /*#__PURE__*/_reactDefault.default.createElement("div", {
           className: "movie-director",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 26,
-            columnNumber: 9
+            lineNumber: 41,
+            columnNumber: 11
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("span", {
           className: "label",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 27,
-            columnNumber: 11
+            lineNumber: 42,
+            columnNumber: 13
           }
         }, "Director: "), /*#__PURE__*/_reactDefault.default.createElement("span", {
           className: "value",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 28,
-            columnNumber: 11
+            lineNumber: 43,
+            columnNumber: 13
           }
         }, movie.Director)), /*#__PURE__*/_reactDefault.default.createElement("div", {
           className: "movie-actors",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 30,
-            columnNumber: 9
+            lineNumber: 45,
+            columnNumber: 11
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("span", {
           className: "label",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 31,
-            columnNumber: 11
+            lineNumber: 46,
+            columnNumber: 13
           }
         }, "Actors: "), /*#__PURE__*/_reactDefault.default.createElement("span", {
           className: "value",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32,
-            columnNumber: 11
+            lineNumber: 47,
+            columnNumber: 13
           }
         }, movie.Actors)), /*#__PURE__*/_reactDefault.default.createElement("button", {
           onClick: () => {
@@ -27650,10 +27669,10 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 34,
-            columnNumber: 9
+            lineNumber: 50,
+            columnNumber: 11
           }
-        }, "Back"))
+        }, "Back")))
       );
     }
   }
@@ -27663,7 +27682,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./movie-view.scss":"4iZ2Z"}],"4iZ2Z":[function() {},{}],"7rA65":[function(require,module,exports) {
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","./movie-view.scss":"4iZ2Z","axios":"7rA65"}],"4iZ2Z":[function() {},{}],"7rA65":[function(require,module,exports) {
 module.exports = require('./lib/axios');
 },{"./lib/axios":"4qfhW"}],"4qfhW":[function(require,module,exports) {
 'use strict';

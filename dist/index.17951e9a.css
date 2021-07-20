@@ -3,7 +3,43 @@
 *, body {
   font-family: "prompt";
 }
+.movie-view {
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+  width: 90%;
+  height: 98vh;
+  margin: auto;
+  padding: 1.5%;
+  background-color: lavender;
+  border-radius: 10px;
+}
 
+.movie-view div {
+  margin-top: 1%;
+}
+
+.movie-poster img {
+  height: 800px;
+  float: left;
+}
+
+.movie-title {
+  font-size: 50px;
+  margin-top: 15%;
+}
+
+.movie-body {
+  font-size: 22px;
+  width: 60%;
+  margin: auto;
+  margin-left: 480px;
+  padding-top: 200px;
+}
+
+.label {
+  font-weight: bold;
+}
 *,
 body {
   box-sizing: border-box;
@@ -17,6 +53,7 @@ form {
   margin-top: 15%;
   padding: 1.5%;
   background-color: lavender;
+  border-radius: 10px;
 }
 
 label,
@@ -44,6 +81,7 @@ form {
   margin-top: 15%;
   padding: 1.5%;
   background-color: lavender;
+  border-radius: 10px;
 }
 
 label,
