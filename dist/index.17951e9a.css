@@ -1,0 +1,65 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;1,200&display=swap");
+*, body {
+  font-family: "prompt";
+}
+*,
+body {
+  box-sizing: border-box;
+}
+
+form {
+  display: block;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  margin-top: 15%;
+  padding: 1.5%;
+  background-color: lavender;
+}
+
+label,
+.loginBtn {
+  display: block;
+  width: 250px;
+  margin: auto;
+  margin-top: 1%;
+}
+
+.loginBtn {
+  width: 100px;
+  margin-top: 2%;
+}
+
+*,
+body {
+  box-sizing: border-box;
+}
+
+form {
+  display: block;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  margin-top: 15%;
+  padding: 1.5%;
+  background-color: lavender;
+}
+
+label,
+.registerBtn {
+  display: block;
+  width: 200px;
+  margin: auto;
+  margin-top: 1%;
+}
+
+.registerBtn {
+  width: 100px;
+  margin-top: 2%;
+}
+.my-flix {
+  color: coral;
+}
+/*# sourceMappingURL=index.17951e9a.css.map */

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;1,200&display=swap');
+
+$prompt: 'Prompt', sans-serif;
+
+$fonts: (
+  'prompt': $prompt,
+);
+
+$typgraphies: (
+  'h1': (
+    font: 'prompt',
+    weight: 300,
+    size: 32px,
+  ),
+  'p': (
+    font: 'prompt',
+    weight: 200,
+  ),
+);
+
+*, body {
+  font-family: 'prompt';
+}
