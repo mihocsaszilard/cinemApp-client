@@ -7,7 +7,6 @@ import { LoginView } from "../login-view/login-view";
 import { RegistrationView } from "../registration-view/registration-view";
 
 import "./main-view.scss";
-import "../../settings/typography.scss";
 
 class MainView extends React.Component {
   constructor() {
@@ -56,8 +55,22 @@ class MainView extends React.Component {
     });
   }
 
+  getGenres() {
+    axios
+      .get("https://cinemapp-backend.herokuapp.com/genres")
+      .then((response) => {
+        this.setState({
+          genres: response.data,
+        });
+        console.log(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
   render() {
-    const { movies, selectedMovie, user, register } = this.state;
+    const { movies, selectedMovie, user, register, genres } = this.state;
 
     /* If there is not registered user, the RegisterView is rendered. If there is a user registered,
      the user details are *passed as a prop to the LoginView*/

@@ -1,7 +1,27 @@
+.main-view {
+  text-align: center;
+}
 
-@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;1,200&display=swap");
-*, body {
-  font-family: "prompt";
+.card-container {
+  display: inline-block;
+}
+
+.movie-card {
+  height: auto;
+  width: 250px;
+  margin: 10px 20px;
+  transition: 0.4s ease-in-out;
+}
+.movie-card:hover, .movie-card:active {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card-img {
+  width: 250px;
+  height: 450px;
+  box-shadow: 0 0 5px 2px black;
+  overflow: hidden;
 }
 .movie-view {
   box-sizing: border-box;
@@ -29,16 +49,26 @@
   margin-top: 15%;
 }
 
+.movie-genre,
+.movie-director,
+.movie-actors {
+  font-weight: bold;
+}
+
 .movie-body {
   font-size: 22px;
   width: 60%;
   margin: auto;
-  margin-left: 480px;
+  margin-left: 40%;
   padding-top: 200px;
 }
 
+.actors {
+  display: block;
+}
+
 .label {
-  font-weight: bold;
+  font-weight: 400;
 }
 *,
 body {

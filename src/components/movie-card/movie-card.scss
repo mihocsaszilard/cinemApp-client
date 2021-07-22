@@ -1,0 +1,26 @@
+.main-view {
+  text-align: center;
+}
+
+.card-container {
+  display: inline-block;
+}
+
+.movie-card {
+  height: auto;
+  width: 250px;
+  margin: 10px 20px;
+  &:hover,
+  &:active {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  transition: .4s ease-in-out;
+}
+
+.card-img {
+  width: 250px;
+  height: 450px;
+  box-shadow: 0 0 5px 2px black;
+  overflow: hidden;
+}

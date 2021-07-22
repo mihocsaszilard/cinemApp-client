@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 import "./registration-view.scss";
-import "../../settings/typography.scss";
 
 export function RegistrationView(props) {
   const [username, setUsername] = useState("");

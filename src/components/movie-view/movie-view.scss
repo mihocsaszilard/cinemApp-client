@@ -24,14 +24,24 @@
   margin-top: 15%;
 }
 
+.movie-genre,
+.movie-director,
+.movie-actors {
+  font-weight: bold;
+}
+
 .movie-body {
   font-size: 22px;
   width: 60%;
   margin: auto;
-  margin-left: 480px;
+  margin-left: 40%;
   padding-top: 200px;
 }
 
+.actors {
+  display: block;
+}
+
 .label{
-  font-weight: bold;
+  font-weight: 400;
 }

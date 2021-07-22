@@ -1,33 +1,26 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import "./movie-card.scss";
-import "../../settings/typography.scss";
 
 export class MovieCard extends React.Component {
   render() {
     const { movieData, onMovieClick } = this.props;
     return (
-      <div
-        className="movie-card"
-        onClick={() => {
-          onMovieClick(movieData);
-        }}
-      >
-        {movieData.Title}
+      <div className="card-container">
+        <div
+          className="movie-card"
+          onClick={() => {
+            onMovieClick(movieData);
+          }}
+        >
+          <div className="card">
+            {/* <div className="card-title">{movieData.Title}</div> */}
+            <div>
+              <img className="card-img" src={movieData.ImgPath} />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
 }
-
-MovieCard.propTypes = {
-  movieData: PropTypes.shape({
-    Title: PropTypes.string.isRequired,
-    Description: PropTypes.string.isRequired,
-    ImgPath: PropTypes.string.isRequired,
-    Genre: PropTypes.string.isRequired,
-    Director: PropTypes.string.isRequired,
-    Actors: PropTypes.array.isRequired,
-  }).isRequired,
-  onMovieClick: PropTypes.func.isRequired,
-};
