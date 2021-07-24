@@ -1,5 +1,10 @@
 $color: coral;
+$full-black: #000;
 
 .my-flix {
   color: $color;
+}
+
+.full-width-black {
+  background-color: $full-black;
 }

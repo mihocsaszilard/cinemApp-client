@@ -1,26 +1,28 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
 
-import "./movie-card.scss";
+// import "./movie-card.scss";
 
 export class MovieCard extends React.Component {
   render() {
     const { movieData, onMovieClick } = this.props;
     return (
-      <div className="card-container">
-        <div
-          className="movie-card"
-          onClick={() => {
-            onMovieClick(movieData);
-          }}
-        >
-          <div className="card">
-            {/* <div className="card-title">{movieData.Title}</div> */}
-            <div>
-              <img className="card-img" src={movieData.ImgPath} />
-            </div>
+      <Card className="card-container h-100 ">
+        <Card.Body className="card bg-dark">
+          {/* <Card.Title className="card-title">{movieData.Title}</Card.Title> */}
+
+          <div className="img-container h-100 ">
+            <Card.Img
+              className="card-img h-100"
+              src={movieData.ImgPath}
+              onClick={() => {
+                onMovieClick(movieData);
+              }}
+            />
           </div>
-        </div>
-      </div>
+        </Card.Body>
+      </Card>
     );
   }
 }

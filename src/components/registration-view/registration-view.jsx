@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import FloatingLabel from "react-bootstrap/FloatingLabel";
 
-import "./registration-view.scss";
+// import "./registration-view.scss";
+import logo from "url:../../../public/img/CinemApp2.png";
 
 export function RegistrationView(props) {
   const [username, setUsername] = useState("");
@@ -16,43 +20,62 @@ export function RegistrationView(props) {
   };
 
   return (
-    <form>
-      <label className="username">
-        Username:
-        <input
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-      </label>
-      <label className="password">
-        Password:
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-      </label>
-      <label className="email">
-        E-mail:
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-      </label>
-      <label className="birthdate">
-        Birth date:
-        <input
-          type="date"
-          value={birthdate}
-          onChange={(e) => setBirthdate(e.target.value)}
-        />
-      </label>
-      <button className="registerBtn" type="submit" onClick={handleSubmit}>
-        Register
-      </button>
-    </form>
+    <>
+      <img className="w-25 d-flex mx-auto mt-5" src={logo} />
+      <div className="text-center mt-5 register text-light">
+        If you don`t have an account please register!
+      </div>
+      <Form className="w-25 m-auto mt-5">
+        <Form.Group className="mb-3  " controlId="formBasicUsername">
+          <FloatingLabel controlId="username" label="Username">
+            <Form.Control
+              type="username"
+              placeholder="Username"
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </FloatingLabel>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <FloatingLabel controlId="email" label="Email address">
+            <Form.Control
+              type="email"
+              placeholder="name@example.com"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </FloatingLabel>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <FloatingLabel controlId="password" label="Password">
+            <Form.Control
+              type="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </FloatingLabel>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicBirthDate">
+          <FloatingLabel controlId="birthdate" label="Birth date">
+            <Form.Control
+              type="date"
+              placeholder="Birth date"
+              onChange={(e) => setBirthdate(e.target.value)}
+            />
+          </FloatingLabel>
+        </Form.Group>
+
+        <Button
+          className="d-flex m-auto mt-5 justify-content-center"
+          variant="success"
+          type="submit"
+          onClick={handleSubmit}
+        >
+          Register
+        </Button>
+      </Form>
+    </>
   );
 }
 
