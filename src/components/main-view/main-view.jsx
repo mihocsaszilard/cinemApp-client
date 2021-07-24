@@ -9,7 +9,7 @@ import { Container } from "react-bootstrap";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-// import "./main-view.scss";
+import "./main-view.scss";
 
 class MainView extends React.Component {
   constructor() {
@@ -85,7 +85,7 @@ class MainView extends React.Component {
           will be returned otherwise, all *movies will be returned*/
           selectedMovie ? (
             <Row className="justify-content-md-center">
-              <Col sm={12} md={9}>
+              <Col xs={12} md={8}>
                 <MovieView
                   movie={selectedMovie}
                   onBackClick={(newSelectedMovie) => {
@@ -97,7 +97,13 @@ class MainView extends React.Component {
           ) : (
             <Row className="justify-content-md-center">
               {movies.map((movie) => (
-                <Col sm={12} md={9} lg={4} xl={3}>
+                <Col
+                  className="my-2 movie-card-col"
+                  xs={12}
+                  md={8}
+                  lg={4}
+                  xl={3}
+                >
                   <MovieCard
                     key={movie._id}
                     movieData={movie}

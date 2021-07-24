@@ -1,3 +1,9 @@
+$full-black: #000;
+
 body {
   background-color: black;
+}
+
+.full-black {
+  background-color: $full-black; 
 }

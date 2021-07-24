@@ -12,9 +12,9 @@ import logo from "url:../public/img/CinemApp2.png";
 class CinemApplication extends React.Component {
   render() {
     return (
-      <Container>
+      <Container xs={12} md={8}>
         <Navbar
-          className="full-width-black"
+          className="full-black"
           collapseOnSelect
           expand="lg"
           sticky="top"

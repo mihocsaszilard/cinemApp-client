@@ -2,25 +2,14 @@
   text-align: center;
 }
 
-.card-container {
-  display: inline-block;
+.card-container { 
+  background-color: black !important;
 }
 
-.movie-card {
-  height: auto;
-  width: 250px;
-  margin: 10px 20px;
-  &:hover,
-  &:active {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
-  transition: .4s ease-in-out;
+.card-body {
+  background-color: black !important;
 }
 
 .card-img {
-  width: 250px;
-  height: 450px;
-  box-shadow: 0 0 5px 2px black;
   overflow: hidden;
 }

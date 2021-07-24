@@ -13,28 +13,15 @@ export class MovieView extends React.Component {
     this.state = {};
   }
 
-  componentDidMount() {
-    axios
-      .get("https://cinemapp-backend.herokuapp.com/genres")
-      .then((response) => {
-        this.setState({
-          genres: response.data,
-        });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
-
   render() {
     const { movie, onBackClick } = this.props;
 
     return (
       <Row className="movie-view mt-5">
-        <Col className="movie-poster">
+        <Col xs={12} md={6} className="movie-poster">
           <img className="w-75" src={movie.ImgPath} />
         </Col>
-        <Col className="movie-body text-light">
+        <Col xs={12} md={6} className="movie-body text-light">
           <div className="movie-title">
             <span className="label"> </span>
             <h1 className="value">{movie.Title}</h1>
