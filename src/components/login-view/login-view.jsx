@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
+import { useHistory } from "react-router-dom";
+
 import {
   Form,
   Row,
@@ -13,11 +15,12 @@ import {
 
 // import "./login-view.scss";
 import logo from "url:../../../public/img/CinemApp2.png";
-import { RegistrationView } from "../registration-view/registration-view";
 
 export function LoginView(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
+  let history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,6 +38,10 @@ export function LoginView(props) {
         console.log("no such user");
       });
   };
+
+  function handleClick() {
+    history.push("/register");
+  }
 
   return (
     <>
@@ -91,7 +98,7 @@ export function LoginView(props) {
                 className="w-25 d-inline-block"
                 variant="success"
                 type="submit"
-                onClick={RegistrationView}
+                onClick={handleClick}
               >
                 Register
               </Button>

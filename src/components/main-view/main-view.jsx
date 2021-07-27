@@ -1,14 +1,20 @@
 import React from "react";
 import axios from "axios";
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  Link,
+} from "react-router-dom";
 
 import { MovieCard } from "../movie-card/movie-card";
 import { MovieView } from "../movie-view/movie-view";
 import { LoginView } from "../login-view/login-view";
 import { DirectorView } from "../director-view/director-view";
+import { GenreView } from "../genre-view/genre-view";
 import { RegistrationView } from "../registration-view/registration-view";
 
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button, Container } from "react-bootstrap";
 
 import "./main-view.scss";
 
@@ -19,6 +25,8 @@ class MainView extends React.Component {
     this.state = {
       movies: [],
       user: null,
+      directors: [],
+      genres: [],
     };
   }
 
@@ -30,6 +38,7 @@ class MainView extends React.Component {
         user: localStorage.getItem("user"), //-> user is logged in
       });
       this.getMovies(accessToken); //get /movies endpoint
+      this.getDirectors(accessToken);
     }
   }
 
@@ -49,21 +58,38 @@ class MainView extends React.Component {
       });
   }
 
-  // getDirectors(token) {
-  //   axios
-  //     .get("https://cinemapp-backend.herokuapp.com/directors", {
-  //       headers: { Authorization: `Bearer ${token}` },
-  //     })
-  //     .then((response) => {
-  //       //assign the result to the state
-  //       this.setState({
-  //         director: response.data,
-  //       });
-  //     })
-  //     .catch(function (error) {
-  //       console.log(error);
-  //     });
-  // }
+  getDirectors(token) {
+    axios
+      .get("https://cinemapp-backend.herokuapp.com/directors", {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      .then((response) => {
+        // assign result to the state
+        this.setState({
+          directors: response.data,
+        });
+        //console.log(response.data)
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  getGenres(token) {
+    axios
+      .get("https://cinemapp-backend.herokuapp.com/genres", {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      .then((response) => {
+        this.setState({
+          genres: response.data,
+        });
+        console.log(response.data, "genres response");
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
 
   /*When a movie is clicked, this function is invoked and updates 
   the state of the `selectedMovie` *property to that movie*/
@@ -100,19 +126,26 @@ class MainView extends React.Component {
   }
 
   render() {
-    const { movies, user, directors } = this.state;
-
+    const { movies, user, directors, genres } = this.state;
     return (
       <Router>
-        <Button
-          className="logout-button"
-          variant="outline-danger"
-          onClick={() => {
-            this.onLoggedOut();
-          }}
-        >
-          Logout
-        </Button>
+        <Container className="navbar-buttons mt-3">
+          <Link to={`/directors`}>
+            <Button variant="outline-light">Directors</Button>
+          </Link>
+          <Link to={`/genres`}>
+            <Button variant="outline-light">Genres</Button>
+          </Link>
+          <Button
+            className="logout-button mx-4"
+            variant="outline-danger"
+            onClick={() => {
+              this.onLoggedOut();
+            }}
+          >
+            Logout
+          </Button>
+        </Container>
         <Row className="main-view justify-content-center">
           <Route
             exact
@@ -177,18 +210,63 @@ class MainView extends React.Component {
               return (
                 <Col md={8}>
                   <DirectorView
-                    director={
-                      movies.find((m) => m.Director.Name === match.params.name)
-                        .Director
-                    }
-                    onBackClick={() => history.goBack()}
+                    director={directors.find(
+                      (m) => m.Name === match.params.name
+                    )}
+                    onBackClick={() => {
+                      history.goBack();
+                    }}
                   />
                 </Col>
               );
             }}
           />
+          <Route
+            exact
+            path="/directors"
+            render={() => {
+              return directors.map((m) => (
+                <Col md={12} xl={6} key={m._id}>
+                  <DirectorView director={m} />
+                </Col>
+              ));
+            }}
+          />
+          <Route
+            path="/genres/:name"
+            render={({ match, history }) => {
+              if (!user)
+                return (
+                  <Col>
+                    <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />
+                  </Col>
+                );
+              if (movies.length === 0) return <div className="main-view" />;
+              return (
+                <Col md={8}>
+                  <GenreView
+                    genre={genres.find((m) => m.Name === match.params.name)}
+                    onBackClick={() => {
+                      history.goBack();
+                    }}
+                  />
+                </Col>
+              );
+            }}
+          />
+          <Route
+            exact
+            path="/genres"
+            render={() => {
+              return genres.map((m) => (
+                <Col md={12} xl={6} key={m._id}>
+                  <GenreView genre={m} />
+                </Col>
+              ));
+            }}
+          />
         </Row>
-        <div className="light-animation"></div>
+        {/* <div className="light-animation"></div> */}
       </Router>
     );
   }

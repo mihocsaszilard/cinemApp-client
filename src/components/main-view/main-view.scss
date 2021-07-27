@@ -10,11 +10,18 @@
   transition: .4s ease-in-out; 
 }
 
-.logout-button {
+.navbar-buttons {
+  text-align: right;
+  width: 50%;
+  height: 70px;
   position: fixed;
   right: 2%;
-  top: 3%;
+  top: 0;
   z-index: 1021;
+}
+
+.logout-button {
+  z-index: 1022;
 }
 
 .light-animation { 

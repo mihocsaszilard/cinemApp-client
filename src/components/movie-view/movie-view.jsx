@@ -13,7 +13,6 @@ export class MovieView extends React.Component {
 
   render() {
     const { movie, onBackClick } = this.props;
-
     return (
       <Row className="movie-view mt-5 w-75 m-auto">
         <Col md={12} lg={6} className="movie-poster">
@@ -63,9 +62,18 @@ export class MovieView extends React.Component {
             Back
           </Button>
         </Col>
-        <Link to={`/directors/${movie.Director.Name}`}>
-          <Button variant="link">Director</Button>
-        </Link>
+
+        {movie.Director.map((Director) => (
+          <Link key={Director._id} to={`/directors/${Director.Name}`}>
+            <Button variant="link">{Director.Name}</Button>
+          </Link>
+        ))}
+
+        {movie.Genre.map((Genre) => (
+          <Link key={Genre._id} to={`/genres/${Genre.Name}`}>
+            <Button variant="link">{Genre.Name}</Button>
+          </Link>
+        ))}
       </Row>
     );
   }
@@ -80,5 +88,4 @@ MovieView.propTypes = {
     Director: PropTypes.array.isRequired,
     Actors: PropTypes.array.isRequired,
   }),
-  // onMovieClick: PropTypes.func.isRequired,
 };
