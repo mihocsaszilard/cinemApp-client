@@ -13,6 +13,9 @@
 .card-img {
   overflow: hidden;
 }
+.movie-poster {
+  box-shadow: 0 0 200px #161616;
+}
 .movie-card-col {
   height: 435px;
   overflow: hidden;
@@ -23,11 +26,60 @@
   transform: scale(1.1);
   cursor: pointer;
 }
-.my-flix {
-  color: coral;
+
+.logout-button {
+  position: fixed;
+  right: 2%;
+  top: 3%;
+  z-index: 1021;
+}
+
+.light-animation {
+  border-radius: 50%;
+  box-shadow: -50px -50px 500px rgba(255, 238, 0, 0.2);
+  width: 600px;
+  height: 600px;
+  position: fixed;
+  left: -10%;
+  bottom: -25%;
+  animation: slide 60s ease-in-out infinite alternate both;
+}
+
+@keyframes slide {
+  0% {
+    left: -10%;
+    bottom: -65%;
+  }
+  25% {
+    left: 100%;
+    bottom: -65%;
+  }
+  50% {
+    left: 100%;
+    bottom: 90%;
+  }
+  75% {
+    left: 100%;
+    bottom: -65%;
+  }
+  100% {
+    left: -10%;
+    bottom: -65%;
+  }
 }
 
 .full-black {
   background-color: #000;
+  z-index: 90;
+}
+
+.custom-navbar {
+  height: 70px;
+}
+
+.cinemapp-logo {
+  position: fixed;
+  left: 5%;
+  top: 15px;
 }
 /*# sourceMappingURL=index.17951e9a.css.map */

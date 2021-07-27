@@ -1,11 +1,9 @@
 import React from "react";
-import axios from "axios";
 import PropTypes from "prop-types";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
+import { Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-// import "./movie-view.scss";
+import "./movie-view.scss";
 
 export class MovieView extends React.Component {
   constructor() {
@@ -17,21 +15,21 @@ export class MovieView extends React.Component {
     const { movie, onBackClick } = this.props;
 
     return (
-      <Row className="movie-view mt-5">
-        <Col xs={12} md={6} className="movie-poster">
-          <img className="w-75" src={movie.ImgPath} />
+      <Row className="movie-view mt-5 w-75 m-auto">
+        <Col md={12} lg={6} className="movie-poster">
+          <img className="w-100" src={movie.ImgPath} />
         </Col>
-        <Col xs={12} md={6} className="movie-body text-light">
+        <Col md={12} lg={6} className="movie-body text-light my-auto">
           <div className="movie-title">
             <span className="label"> </span>
-            <h1 className="value">{movie.Title}</h1>
+            <h1 className="value ">{movie.Title}</h1>
           </div>
           <div className="movie-genre">
             <span className="label"></span>
             {movie.Genre.map((Genre) => (
-              <h2 key={Genre._id} className="value">
+              <h3 key={Genre._id} className="value mt-4">
                 {Genre.Name}
-              </h2>
+              </h3>
             ))}
           </div>
           <div className="movie-description">
@@ -65,6 +63,9 @@ export class MovieView extends React.Component {
             Back
           </Button>
         </Col>
+        <Link to={`/directors/${movie.Director.Name}`}>
+          <Button variant="link">Director</Button>
+        </Link>
       </Row>
     );
   }

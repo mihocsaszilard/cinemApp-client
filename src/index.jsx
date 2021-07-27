@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Navbar from "react-bootstrap/Navbar";
+import { Navbar, Container, Image } from "react-bootstrap";
 import MainView from "./components/main-view/main-view";
-import Container from "react-bootstrap/Container";
 
 // Import statement to indicate that you need to bundle `./index.scss`
 import "./index.scss";
@@ -14,7 +13,7 @@ class CinemApplication extends React.Component {
     return (
       <Container xs={12} md={8}>
         <Navbar
-          className="full-black"
+          className="full-black custom-navbar"
           collapseOnSelect
           expand="lg"
           sticky="top"
@@ -22,13 +21,15 @@ class CinemApplication extends React.Component {
         >
           <Container>
             <Navbar.Brand href="#home">
-              <img
-                alt=""
-                src={logo}
-                width="auto"
-                height="50"
-                className="d-inline-block align-top"
-              />{" "}
+              <div className="cinemapp-logo">
+                <Image
+                  alt=""
+                  src={logo}
+                  width="auto"
+                  height="50"
+                  className=" d-inline-block align-top"
+                />{" "}
+              </div>
             </Navbar.Brand>
           </Container>
         </Navbar>

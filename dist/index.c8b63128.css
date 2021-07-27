@@ -5,4 +5,18 @@ body {
 .full-black {
   background-color: #000;
 }
+
+::-webkit-scrollbar {
+  width: 1px;
+  height: 0;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: red;
+  width: 2px;
+}
 /*# sourceMappingURL=index.c8b63128.css.map */

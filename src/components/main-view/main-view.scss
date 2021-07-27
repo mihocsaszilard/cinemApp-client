@@ -9,3 +9,49 @@
   }
   transition: .4s ease-in-out; 
 }
+
+.logout-button {
+  position: fixed;
+  right: 2%;
+  top: 3%;
+  z-index: 1021;
+}
+
+.light-animation { 
+  border-radius: 50%;
+  box-shadow: -50px -50px 500px rgba(255, 238, 0, 0.2);
+  width: 600px;
+  height: 600px;
+  position: fixed;
+  left: -10%;
+  bottom: -25%;
+  animation: slide 60s ease-in-out infinite alternate both;
+}
+
+@keyframes slide {
+  0% {
+           
+    left: -10%;
+    bottom: -65%;
+  }
+  25% {
+            
+    left: 100%;
+    bottom: -65%;  
+  }
+  50% {
+            
+    left: 100%;
+    bottom: 90%;  
+  }
+  75% {
+            
+    left: 100%;
+    bottom: -65%;  
+  }
+  100% {
+            
+    left: -10%;
+    bottom: -65%;  
+  }
+}
