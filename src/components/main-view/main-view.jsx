@@ -25,8 +25,6 @@ class MainView extends React.Component {
     this.state = {
       movies: [],
       user: null,
-      directors: [],
-      genres: [],
     };
   }
 
@@ -39,6 +37,7 @@ class MainView extends React.Component {
       });
       this.getMovies(accessToken); //get /movies endpoint
       this.getDirectors(accessToken);
+      this.getGenres(accessToken);
     }
   }
 
@@ -84,7 +83,7 @@ class MainView extends React.Component {
         this.setState({
           genres: response.data,
         });
-        console.log(response.data, "genres response");
+        console.log(genres, "genres response");
       })
       .catch(function (error) {
         console.log(error);
