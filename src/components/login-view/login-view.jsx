@@ -93,7 +93,7 @@ export function LoginView(props) {
               md={8}
               lg={6}
             >
-              <div className="  d-inline-block text-right">Or</div>
+              <div className="d-inline-block text-right">Or</div>
               <Button
                 className="w-25 d-inline-block"
                 variant="success"

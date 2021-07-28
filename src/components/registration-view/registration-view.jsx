@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import axios from "axios";
 import PropTypes from "prop-types";
+import { useHistory } from "react-router-dom";
 import {
   Form,
   Row,
@@ -12,22 +14,27 @@ import {
 
 // import "./registration-view.scss";
 import logo from "url:../../../public/img/CinemApp2.png";
-import axios from "axios";
 
 export function RegistrationView(props) {
+  const [firstname, setFirstName] = useState("");
+  const [lastname, setLastName] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [birthdate, setBirthdate] = useState("");
+  const [birth, setBirth] = useState("");
+
+  let history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
       .post("https://cinemapp-backend.herokuapp.com/users", {
+        FirstName: firstname,
+        LastName: lastname,
         Username: username,
         Password: password,
         Email: email,
-        Birthday: birthdate,
+        Birth: birth,
       })
       .then((response) => {
         const data = response.data;
@@ -38,6 +45,10 @@ export function RegistrationView(props) {
         console.log("error registering the user");
       });
   };
+
+  function handleClick() {
+    history.push("/");
+  }
 
   return (
     <>
@@ -66,7 +77,7 @@ export function RegistrationView(props) {
                           className="py-0"
                           type="string"
                           placeholder="First name"
-                          onChange={(e) => setUsername(e.target.value)}
+                          onChange={(e) => setFirstName(e.target.value)}
                         />
                       </FloatingLabel>
                     </Form.Group>
@@ -79,7 +90,7 @@ export function RegistrationView(props) {
                           className="py-0"
                           type="string"
                           placeholder="Last name"
-                          onChange={(e) => setUsername(e.target.value)}
+                          onChange={(e) => setLastName(e.target.value)}
                         />
                       </FloatingLabel>
                     </Form.Group>
@@ -120,7 +131,7 @@ export function RegistrationView(props) {
                     <Form.Control
                       type="date"
                       placeholder="Birth date"
-                      onChange={(e) => setBirthdate(e.target.value)}
+                      onChange={(e) => setBirth(e.target.value)}
                     />
                   </FloatingLabel>
                 </Form.Group>
@@ -135,6 +146,23 @@ export function RegistrationView(props) {
                 </Button>
               </Form>
             </Row>
+            <Row
+              className=" text-center mt-5 text-light d-inline-block"
+              xs={12}
+              md={8}
+              lg={6}
+            >
+              <div className="d-inline-block text-right">Or</div>
+              <Button
+                className="w-25 d-inline-block"
+                variant="outline-success"
+                type="submit"
+                onClick={handleClick}
+              >
+                Login
+              </Button>
+              <div className=" d-inline-block">now!</div>
+            </Row>
           </Row>
         </Col>
       </Container>
@@ -144,9 +172,11 @@ export function RegistrationView(props) {
 
 RegistrationView.propTypes = {
   register: PropTypes.shape({
+    firstname: PropTypes.string,
+    lastname: PropTypes.string,
     username: PropTypes.string.isRequired,
     password: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
-    birthdate: PropTypes.string.isRequired,
+    birth: PropTypes.string.isRequired,
   }),
 };

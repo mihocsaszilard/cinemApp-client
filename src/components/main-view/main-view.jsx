@@ -120,7 +120,7 @@ class MainView extends React.Component {
   getUserFavs(token) {
     axios
       .get(
-        "https://mymovies-db-api.herokuapp.com/users/" +
+        "https://cinemapp-backend.herokuapp.com/users/" +
           localStorage.getItem("user"),
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -194,45 +194,35 @@ class MainView extends React.Component {
             <Col className="toggle-nav d-block text-right">
               <Navbar.Toggle aria-controls="responsive-navbar-nav " />
               <Navbar.Collapse id="basic-navbar-nav hamburger-button ">
-                <Nav.Link>
-                  <Link className="custom-link" to={`/`}>
-                    Movies
-                  </Link>
-                </Nav.Link>
+                <Link className="custom-link mx-3" to={`/`}>
+                  Movies
+                </Link>
 
-                <Nav.Link>
-                  <Link className="custom-link" to={`/directors`}>
-                    Directors
-                  </Link>
-                </Nav.Link>
+                <Link className="custom-link mx-3" to={`/directors`}>
+                  Directors
+                </Link>
 
-                <Nav.Link>
-                  <Link className="custom-link" to={`/genres`}>
-                    Genres
-                  </Link>
-                </Nav.Link>
+                <Link className="custom-link mx-3" to={`/genres`}>
+                  Genres
+                </Link>
 
-                <Nav.Link>
-                  <Link className="custom-link" to={`/actors`}>
-                    Actors
-                  </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link className="custom-link" to={`/users`}>
-                    Profile
-                  </Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Button
-                    className="logout-button "
-                    variant="outline-danger"
-                    onClick={() => {
-                      this.onLoggedOut();
-                    }}
-                  >
-                    Logout
-                  </Button>
-                </Nav.Link>
+                <Link className="custom-link mx-3" to={`/actors`}>
+                  Actors
+                </Link>
+
+                <Link className="custom-link mx-3" to={`/users/:username`}>
+                  Profile
+                </Link>
+
+                <Button
+                  className="logout-button  mx-3"
+                  variant="outline-danger"
+                  onClick={() => {
+                    this.onLoggedOut();
+                  }}
+                >
+                  Logout
+                </Button>
               </Navbar.Collapse>
             </Col>
           </Navbar.Brand>
@@ -428,14 +418,25 @@ class MainView extends React.Component {
           {/* USERS */}
           <Route
             exact
-            path="/users"
+            path="/users/:username"
+            render={({ history }) => {
+              if (!user)
+                return (
+                  <LoginView onLoggedIn={(data) => this.onLoggedIn(data)} />
+                );
+              if (movies.length === 0) return;
+              return <ProfileView history={history} movies={movies} />;
+            }}
+          />
+          <Route
+            path="/profile"
             render={() => {
-              console.log(favoriteMovies);
-              return favoriteMovies.map((m) => (
-                <Col md={9} key={m._id}>
-                  <ProfileView favoriteData={m} />
-                </Col>
-              ));
+              if (!user)
+                return (
+                  <Col>
+                    <ProfileView />
+                  </Col>
+                );
             }}
           />
         </Row>
