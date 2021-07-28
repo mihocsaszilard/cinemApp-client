@@ -27,14 +27,30 @@
   cursor: pointer;
 }
 
-.navbar-buttons {
-  text-align: right;
-  width: 50%;
-  height: 70px;
+.full-black {
+  background-color: #000;
+  z-index: 90;
+}
+
+.cinemapp-logo {
   position: fixed;
-  right: 2%;
+  left: 10%;
   top: 0;
-  z-index: 1021;
+  padding-top: 25px;
+  height: 80px;
+  background-color: #000;
+}
+
+.custom-navbar {
+  width: 115vw;
+}
+
+.navbar-logo {
+  height: 30px;
+}
+
+.toggle-nav {
+  background-color: #000;
 }
 
 .logout-button {
@@ -74,20 +90,23 @@
     bottom: -65%;
   }
 }
-
-
-.full-black {
-  background-color: #000;
-  z-index: 90;
+@media screen and (min-width: 992px) {
+  .toggle-nav {
+    background-color: #000;
+    margin-left: 45vw;
+  }
+}
+@media screen and (max-width: 990px) {
+  .cinemapp-logo {
+    position: fixed;
+    left: 30%;
+    height: 60px;
+    background-color: #000;
+  }
 }
 
-.custom-navbar {
-  height: 70px;
-}
 
-.cinemapp-logo {
-  position: fixed;
-  left: 5%;
-  top: 15px;
-}
+
+
+
 /*# sourceMappingURL=index.17951e9a.css.map */

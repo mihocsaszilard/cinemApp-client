@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;1,200&display=swap');
 
+$aqua: rgb(68, 199, 199);
+$dark-aqua: rgb(51, 141, 141);
+
 $prompt: 'Prompt', sans-serif;
 
 $fonts: (
@@ -20,4 +23,21 @@ $typgraphies: (
 
 body {
   font-family: 'prompt';
+}
+
+p, span {
+  font-size: 20px;
+}
+
+.custom-link {
+  text-decoration: none;
+  color: $aqua;
+  &:hover{
+    color: $dark-aqua;
+  }
+}
+
+
+.aqua-text {
+  color: $aqua;
 }

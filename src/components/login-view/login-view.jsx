@@ -88,7 +88,7 @@ export function LoginView(props) {
             </Row>
 
             <Row
-              className=" text-center mt-5 register text-light d-inline-block"
+              className=" text-center mt-5 text-light d-inline-block"
               xs={12}
               md={8}
               lg={6}

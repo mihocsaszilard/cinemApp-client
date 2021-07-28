@@ -14,21 +14,23 @@ export class MovieView extends React.Component {
   render() {
     const { movie, onBackClick } = this.props;
     return (
-      <Row className="movie-view mt-5 w-75 m-auto">
-        <Col md={12} lg={6} className="movie-poster">
+      <Row className="movie-view mt-5 m-auto ">
+        <Col md={12} lg={6} className="movie-poster ">
           <img className="w-100" src={movie.ImgPath} />
         </Col>
         <Col md={12} lg={6} className="movie-body text-light my-auto">
           <div className="movie-title">
             <span className="label"> </span>
-            <h1 className="value ">{movie.Title}</h1>
+            <h1 className="value aqua-text">{movie.Title}</h1>
           </div>
           <div className="movie-genre">
             <span className="label"></span>
             {movie.Genre.map((Genre) => (
-              <h3 key={Genre._id} className="value mt-4">
-                {Genre.Name}
-              </h3>
+              <Link key={Genre._id} to={`/genres/${Genre.Name}`}>
+                <Button className="custom-link " variant="link">
+                  <h4>{Genre.Name}</h4>
+                </Button>
+              </Link>
             ))}
           </div>
           <div className="movie-description">
@@ -36,20 +38,27 @@ export class MovieView extends React.Component {
             <span className="value">{movie.Description}</span>
           </div>
           <div className="movie-director mt-5">
-            <span className="label">Directed by </span>
+            <span className="label">Directed by:</span>
             {movie.Director.map((Director) => (
-              <h2 key={Director._id} className="value">
-                {Director.Name}
-              </h2>
+              <Link key={Director._id} to={`/directors/${Director.Name}`}>
+                <Button className="custom-link " variant="link">
+                  <h3>{Director.Name}</h3>
+                </Button>
+              </Link>
             ))}
           </div>
           <div className="movie-actors mt-4">
             <span className="label">Casting </span>
-            {movie.Actors.map((Actors) => (
-              <h2 key={Actors._id} className="value actors">
-                {Actors.Name}
-              </h2>
-            ))}
+            <h2>
+              {" "}
+              {movie.Actors.map((Actor) => (
+                <Link key={Actor._id} to={`/actors/${Actor.Name}`}>
+                  <Button className="custom-link " variant="link">
+                    <h3>{Actor.Name}</h3>
+                  </Button>
+                </Link>
+              ))}
+            </h2>
           </div>
 
           <Button
@@ -62,18 +71,6 @@ export class MovieView extends React.Component {
             Back
           </Button>
         </Col>
-
-        {movie.Director.map((Director) => (
-          <Link key={Director._id} to={`/directors/${Director.Name}`}>
-            <Button variant="link">{Director.Name}</Button>
-          </Link>
-        ))}
-
-        {movie.Genre.map((Genre) => (
-          <Link key={Genre._id} to={`/genres/${Genre.Name}`}>
-            <Button variant="link">{Genre.Name}</Button>
-          </Link>
-        ))}
       </Row>
     );
   }

@@ -2,4 +2,17 @@
 body {
   font-family: "prompt";
 }
+p, span {
+  font-size: 20px;
+}
+.custom-link {
+  text-decoration: none;
+  color: #44c7c7;
+}
+.custom-link:hover {
+  color: #338d8d;
+}
+.aqua-text {
+  color: #44c7c7;
+}
 /*# sourceMappingURL=index.d66966e3.css.map */

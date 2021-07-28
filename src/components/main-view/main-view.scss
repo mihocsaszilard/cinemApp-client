@@ -1,3 +1,5 @@
+$full-black: #000;
+
 .movie-card-col {
   height: 435px;
   overflow: hidden;
@@ -10,14 +12,32 @@
   transition: .4s ease-in-out; 
 }
 
-.navbar-buttons {
-  text-align: right;
-  width: 50%;
-  height: 70px;
+.full-black {
+  background-color: $full-black; 
+  z-index: 90;
+}
+
+.cinemapp-logo {
   position: fixed;
-  right: 2%;
-  top: 0;
-  z-index: 1021;
+  left: 10%;
+  top:0;
+  padding-top: 25px;
+  height: 80px;
+  background-color: $full-black; 
+}
+
+.custom-navbar {
+  width: 115vw;
+}
+
+.navbar-logo {
+  height: 30px;
+}
+
+.toggle-nav {
+  background-color: $full-black;
+  // margin-left: 53vw;
+  // text-align: right;
 }
 
 .logout-button {
@@ -62,3 +82,19 @@
     bottom: -65%;  
   }
 }
+
+@media screen and (min-width: 992px) {
+  .toggle-nav {
+    background-color: $full-black;
+    margin-left: 45vw;
+  }
+}
+@media screen and (max-width: 990px){
+  .cinemapp-logo {
+    position: fixed;
+    left: 30%;
+    height: 60px;
+    background-color: $full-black; 
+  }
+}
+  

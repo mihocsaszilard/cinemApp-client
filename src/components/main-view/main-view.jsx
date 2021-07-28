@@ -12,9 +12,20 @@ import { MovieView } from "../movie-view/movie-view";
 import { LoginView } from "../login-view/login-view";
 import { DirectorView } from "../director-view/director-view";
 import { GenreView } from "../genre-view/genre-view";
+import { ActorView } from "../actor-view/actor-view";
+import { ProfileView } from "../profile-view/profile-view";
 import { RegistrationView } from "../registration-view/registration-view";
 
-import { Row, Col, Button, Container } from "react-bootstrap";
+import {
+  Row,
+  Col,
+  Button,
+  Container,
+  Navbar,
+  Image,
+  Nav,
+} from "react-bootstrap";
+import logo from "url:../../../public/img/CinemApp2.png";
 
 import "./main-view.scss";
 
@@ -38,6 +49,8 @@ class MainView extends React.Component {
       this.getMovies(accessToken); //get /movies endpoint
       this.getDirectors(accessToken);
       this.getGenres(accessToken);
+      this.getActors(accessToken);
+      this.getUserFavs(accessToken);
     }
   }
 
@@ -83,10 +96,41 @@ class MainView extends React.Component {
         this.setState({
           genres: response.data,
         });
-        console.log(genres, "genres response");
       })
       .catch(function (error) {
         console.log(error);
+      });
+  }
+
+  getActors(token) {
+    axios
+      .get("https://cinemapp-backend.herokuapp.com/actors", {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      .then((response) => {
+        this.setState({
+          actors: response.data,
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  getUserFavs(token) {
+    axios
+      .get(
+        "https://mymovies-db-api.herokuapp.com/users/" +
+          localStorage.getItem("user"),
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      )
+      .then((response) => {
+        this.setState({
+          favoriteMovies: response.data.FavoriteMovies,
+        });
+        //console.log(response.data)
       });
   }
 
@@ -125,27 +169,76 @@ class MainView extends React.Component {
   }
 
   render() {
-    const { movies, user, directors, genres } = this.state;
+    const { movies, user, favoriteMovies, directors, genres, actors } =
+      this.state;
     return (
       <Router>
-        <Container className="navbar-buttons mt-3">
-          <Link to={`/directors`}>
-            <Button variant="outline-light">Directors</Button>
-          </Link>
-          <Link to={`/genres`}>
-            <Button variant="outline-light">Genres</Button>
-          </Link>
-          <Button
-            className="logout-button mx-4"
-            variant="outline-danger"
-            onClick={() => {
-              this.onLoggedOut();
-            }}
-          >
-            Logout
-          </Button>
-        </Container>
-        <Row className="main-view justify-content-center">
+        <Navbar
+          className="full-black custom-navbar "
+          collapseOnSelect
+          expand="lg"
+          sticky="top"
+          variant="dark"
+        >
+          {" "}
+          <div className="cinemapp-logo">
+            <Link to={`/`}>
+              <Image
+                alt=""
+                src={logo}
+                className="navbar-logo d-inline-block align-top"
+              />
+            </Link>
+          </div>
+          <Navbar.Brand>
+            <Col className="toggle-nav d-block text-right">
+              <Navbar.Toggle aria-controls="responsive-navbar-nav " />
+              <Navbar.Collapse id="basic-navbar-nav hamburger-button ">
+                <Nav.Link>
+                  <Link className="custom-link" to={`/`}>
+                    Movies
+                  </Link>
+                </Nav.Link>
+
+                <Nav.Link>
+                  <Link className="custom-link" to={`/directors`}>
+                    Directors
+                  </Link>
+                </Nav.Link>
+
+                <Nav.Link>
+                  <Link className="custom-link" to={`/genres`}>
+                    Genres
+                  </Link>
+                </Nav.Link>
+
+                <Nav.Link>
+                  <Link className="custom-link" to={`/actors`}>
+                    Actors
+                  </Link>
+                </Nav.Link>
+                <Nav.Link>
+                  <Link className="custom-link" to={`/users`}>
+                    Profile
+                  </Link>
+                </Nav.Link>
+                <Nav.Link>
+                  <Button
+                    className="logout-button "
+                    variant="outline-danger"
+                    onClick={() => {
+                      this.onLoggedOut();
+                    }}
+                  >
+                    Logout
+                  </Button>
+                </Nav.Link>
+              </Navbar.Collapse>
+            </Col>
+          </Navbar.Brand>
+        </Navbar>
+
+        <Row className="main-view justify-content-center ">
           <Route
             exact
             path="/"
@@ -157,7 +250,7 @@ class MainView extends React.Component {
                   </Col>
                 );
               return movies.map((m) => (
-                <Col md={3} key={m._id}>
+                <Col sm={12} md={6} lg={4} xl={3} key={m._id}>
                   <MovieCard movie={m} />
                 </Col>
               ));
@@ -185,7 +278,7 @@ class MainView extends React.Component {
                 );
               if (movies.length === 0) return <div className="main-view" />;
               return (
-                <Col md={8}>
+                <Col>
                   <MovieView
                     movie={movies.find((m) => m._id === match.params.movieId)}
                     onBackClick={() => {
@@ -196,6 +289,8 @@ class MainView extends React.Component {
               );
             }}
           />
+
+          {/* DIRECTORS */}
           <Route
             path="/directors/:name"
             render={({ match, history }) => {
@@ -207,7 +302,7 @@ class MainView extends React.Component {
                 );
               if (movies.length === 0) return <div className="main-view" />;
               return (
-                <Col md={8}>
+                <Col>
                   <DirectorView
                     director={directors.find(
                       (m) => m.Name === match.params.name
@@ -215,7 +310,16 @@ class MainView extends React.Component {
                     onBackClick={() => {
                       history.goBack();
                     }}
-                  />
+                  />{" "}
+                  <Button
+                    className=" mt-4"
+                    variant="outline-light"
+                    onClick={() => {
+                      history.goBack();
+                    }}
+                  >
+                    Back
+                  </Button>
                 </Col>
               );
             }}
@@ -231,6 +335,8 @@ class MainView extends React.Component {
               ));
             }}
           />
+
+          {/* GENRES */}
           <Route
             path="/genres/:name"
             render={({ match, history }) => {
@@ -249,6 +355,15 @@ class MainView extends React.Component {
                       history.goBack();
                     }}
                   />
+                  <Button
+                    className=" mt-4"
+                    variant="outline-light"
+                    onClick={() => {
+                      history.goBack();
+                    }}
+                  >
+                    Back
+                  </Button>
                 </Col>
               );
             }}
@@ -264,8 +379,67 @@ class MainView extends React.Component {
               ));
             }}
           />
+
+          {/* ACTORS */}
+
+          <Route
+            path="/actors/:name"
+            render={({ match, history }) => {
+              if (!user)
+                return (
+                  <Col>
+                    <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />
+                  </Col>
+                );
+              if (movies.length === 0) return <div className="main-view" />;
+              return (
+                <Col md={8}>
+                  <ActorView
+                    actor={actors.find((m) => m.Name === match.params.name)}
+                    onBackClick={() => {
+                      history.goBack();
+                    }}
+                  />
+                  <Button
+                    className=" mt-4"
+                    variant="outline-light"
+                    onClick={() => {
+                      history.goBack();
+                    }}
+                  >
+                    Back
+                  </Button>
+                </Col>
+              );
+            }}
+          />
+          <Route
+            exact
+            path="/actors"
+            render={() => {
+              return actors.map((m) => (
+                <Col md={12} xl={6} key={m._id}>
+                  <ActorView actor={m} />
+                </Col>
+              ));
+            }}
+          />
+
+          {/* USERS */}
+          <Route
+            exact
+            path="/users"
+            render={() => {
+              console.log(favoriteMovies);
+              return favoriteMovies.map((m) => (
+                <Col md={9} key={m._id}>
+                  <ProfileView favoriteData={m} />
+                </Col>
+              ));
+            }}
+          />
         </Row>
-        {/* <div className="light-animation"></div> */}
+        <div className="light-animation"></div>
       </Router>
     );
   }

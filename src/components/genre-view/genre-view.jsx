@@ -8,12 +8,11 @@ import "./genre-view.scss";
 export class GenreView extends React.Component {
   render() {
     const { genre } = this.props;
-    console.log(genre, "genreee");
     return (
-      <Container>
+      <Container className="mt-5">
         <Col>
           <Row className="text-white ">
-            <h1>{genre.Name}</h1>
+            <h1 className="aqua-text">{genre.Name}</h1>
           </Row>
           <Row className="text-white">
             <p className="genre-description">{genre.Description}</p>

@@ -9,10 +9,10 @@ export class DirectorView extends React.Component {
   render() {
     const { director } = this.props;
     return (
-      <Container className="director-container">
+      <Container className="director-container mt-5">
         <Col>
           <Row className="text-white ">
-            <h1>{director.Name}</h1>
+            <h1 className="aqua-text">{director.Name}</h1>
           </Row>
           <Row className="text-white">
             <p className="director-description">
