@@ -41,16 +41,13 @@
   background-color: #000;
 }
 
-.custom-navbar {
-  width: 115vw;
-}
-
 .navbar-logo {
   height: 30px;
 }
 
 .toggle-nav {
   background-color: #000;
+  margin-left: 45vw;
 }
 
 .logout-button {
@@ -90,23 +87,108 @@
     bottom: -65%;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) and (max-width: 1200px) {
   .toggle-nav {
     background-color: #000;
-    margin-left: 45vw;
+    margin-left: 30vw;
+  }
+}
+@media screen and (max-width: 992px) {
+  .toggle-nav {
+    background-color: #000;
+    margin-left: 2%;
   }
 }
 @media screen and (max-width: 990px) {
   .cinemapp-logo {
     position: fixed;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-50%);
     height: 60px;
     background-color: #000;
+  }
+
+  .nav-elements {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    width: 93vw;
+    margin-top: 2%;
+    padding-bottom: 15px;
+  }
+  .nav-elements .custom-link {
+    margin-bottom: 5px;
+    font-size: 35px;
+  }
+}
+
+*,
+body {
+  box-sizing: border-box;
+}
+
+form {
+  display: block;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  margin-top: 15%;
+  padding: 1.5%;
+  background-color: lavender;
+  border-radius: 10px;
+}
+
+label,
+.registerBtn {
+  display: block;
+  width: 200px;
+  margin: auto;
+  margin-top: 1%;
+}
+
+.registerBtn {
+  width: 100px;
+  margin-top: 2%;
+}
+
+@media screen and (max-width: 400px) {
+  .welcome-text-img {
+    display: none;
   }
 }
 
 
+.accordion-item .accordion-button {
+  background-color: black !important;
+  border: 0;
+}
 
+.accordion-button:focus {
+  box-shadow: none;
+}
 
+.image-container-profile img {
+  opacity: 0.8;
+}
+
+.custom-remove {
+  position: relative;
+  bottom: 250px;
+  opacity: 0.8;
+}
+.custom-remove:hover {
+  opacity: 1;
+}
+
+form input {
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .custom-accordion {
+    width: 100% !important;
+  }
+}
 
 /*# sourceMappingURL=index.17951e9a.css.map */

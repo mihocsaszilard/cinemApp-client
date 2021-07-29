@@ -1,16 +1,10 @@
 import React from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
-import {
-  Button,
-  Card,
-  CardDeck,
-  Form,
-  Col,
-  Row,
-  FloatingLabel,
-} from "react-bootstrap";
+import { Button, Card, Form, Col, Row, FloatingLabel } from "react-bootstrap";
+import Accordion from "react-bootstrap/Accordion";
 import "./profile-view.scss";
+import AccordionItem from "react-bootstrap/esm/AccordionItem";
 
 export class ProfileView extends React.Component {
   constructor() {
@@ -25,6 +19,7 @@ export class ProfileView extends React.Component {
       Birth: null,
       FavoriteMovies: [],
       validated: null,
+      favorites: [],
     };
   }
 
@@ -32,6 +27,7 @@ export class ProfileView extends React.Component {
     const accessToken = localStorage.getItem("token");
     if (accessToken !== null) {
       this.getUser(accessToken);
+      this.getUserFavs(accessToken);
     }
   }
 
@@ -55,6 +51,23 @@ export class ProfileView extends React.Component {
       })
       .catch(function (error) {
         console.log(error);
+      });
+  }
+
+  getUserFavs(token) {
+    axios
+      .get(
+        "https://cinemapp-backend.herokuapp.com/users/" +
+          localStorage.getItem("user"),
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      )
+      .then((response) => {
+        this.setState({
+          FavoriteMovies: response.data.FavoriteMovies,
+        });
+        console.log(response.data, "favs");
       });
   }
 
@@ -184,31 +197,159 @@ export class ProfileView extends React.Component {
     const { movies } = this.props;
 
     return (
-      <Row className="profile-view">
-        <Card className="profile-card full-black">
-          <h2 className="text-light">Favorites Movies</h2>
-          <Card.Body>
-            {FavoriteMovies.length === 0 && (
-              <div className="text-center text-light">
-                Your favorite movies!
-              </div>
-            )}
+      <Row className="profile-view d-flex ">
+        <Accordion defaultActiveKey="0" className=" m-auto custom-accordion">
+          <Accordion.Item className="full-black" eventKey="0">
+            <Accordion.Header>
+              <Button variant="outline-primary" className="m-auto">
+                Update Profile
+              </Button>
+            </Accordion.Header>
+            <Accordion.Body className="full-black w-100">
+              <Form
+                noValidate
+                className="w-75 my-auto full-black"
+                validated={validated}
+                onSubmit={(e) =>
+                  this.handleUpdate(
+                    e,
+                    this.FirstName,
+                    this.LastName,
+                    this.Username,
+                    this.Password,
+                    this.Email,
+                    this.Birth
+                  )
+                }
+              >
+                <Row>
+                  <Col>
+                    <Form.Group
+                      className="mb-3  "
+                      controlId="formBasicFirstname"
+                    >
+                      <FloatingLabel
+                        className="d-flex justify-content-start"
+                        controlId="firstname"
+                        label="First name"
+                      >
+                        <Form.Control
+                          type="string"
+                          placeholder="First name"
+                          onChange={(e) => this.setFirstName(e.target.value)}
+                        />
+                      </FloatingLabel>
+                    </Form.Group>
+                    <Form.Group
+                      className="mb-3  "
+                      controlId="formBasicLastname"
+                    >
+                      <FloatingLabel controlId="lastname" label="Last name">
+                        <Form.Control
+                          type="string"
+                          placeholder="Last name"
+                          onChange={(e) => this.setLastName(e.target.value)}
+                        />
+                      </FloatingLabel>
+                    </Form.Group>
 
-            <Row>
-              {FavoriteMovies.length > 0 &&
-                movies.map((movie) => {
+                    <Form.Group className="mb-3" controlId="formBasicUsername">
+                      <FloatingLabel controlId="username" label="Username">
+                        <Form.Control
+                          type="username"
+                          placeholder="Username"
+                          onChange={(e) => this.setUsername(e.target.value)}
+                        />
+                      </FloatingLabel>
+                    </Form.Group>
+                  </Col>
+                  <Col>
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                      <FloatingLabel controlId="password" label="Password">
+                        <Form.Control
+                          type="password"
+                          placeholder="Password"
+                          onChange={(e) => this.setPassword(e.target.value)}
+                        />
+                      </FloatingLabel>
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                      <FloatingLabel controlId="email" label="Email address">
+                        <Form.Control
+                          type="email"
+                          placeholder="Email address"
+                          onChange={(e) => this.setEmail(e.target.value)}
+                        />
+                      </FloatingLabel>
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicBirthday">
+                      <FloatingLabel controlId="birthdate" label="Birthdate">
+                        <Form.Control
+                          type="date"
+                          onChange={(e) => this.setBirth(e.target.value)}
+                        />{" "}
+                      </FloatingLabel>
+                    </Form.Group>
+                  </Col>{" "}
+                </Row>
+                <Card.Body>
+                  <Button
+                    className="mx-3 mt-2"
+                    variant="outline-success"
+                    type="submit"
+                  >
+                    Update
+                  </Button>
+                  <Button
+                    className="mx-3 mt-2"
+                    variant="outline-danger"
+                    onClick={(e) => this.handleDeleteUser(e)}
+                  >
+                    Delete
+                  </Button>
+                </Card.Body>
+              </Form>
+            </Accordion.Body>
+          </Accordion.Item>
+
+          <Accordion.Item className="text-light full-black m-auto" eventKey="1">
+            <Accordion.Header className="text-light full-black mt-md-5">
+              <Button variant="outline-primary" className="m-auto">
+                Favorites
+              </Button>
+            </Accordion.Header>
+
+            <Accordion.Body className="text-center full-black" sm={12} md={6}>
+              {FavoriteMovies.length === 0 && (
+                <div className="text-center text-light m-auto">
+                  Your don`t have favorite movies yet!
+                </div>
+              )}
+
+              <div className="d-flex justify-content-center ">
+                {movies.map((movie) => {
                   if (
                     movie._id ===
-                    FavoriteMovies.find((m) => m._id === movie._id)
+                    FavoriteMovies.find((m) => m._id === movies._id)
                   ) {
                     return (
-                      <Col className="movie-card-deck">
-                        <Card key={movie._id}>
-                          <Card.Img variant="top" src={movie.ImgUrl} />
-                          <Card.Body>
+                      <Col className="text-center justify-content-center">
+                        <Row className=" aqua-text" key={movie._id}>
+                          <Col
+                            className="m-auto image-container-profile"
+                            sm={12}
+                            md={6}
+                            lg={5}
+                          >
+                            <img
+                              className="w-100 m-auto mt-2"
+                              src={movie.ImgPath}
+                            />
+
                             <Button
-                              size="sm"
-                              className="profile-button remove-favorite"
+                              className="remove-favorite w-50 px-6 m-auto mt-2 custom-remove"
                               variant="danger"
                               value={movie._id}
                               onClick={(e) =>
@@ -217,140 +358,28 @@ export class ProfileView extends React.Component {
                             >
                               Remove
                             </Button>
-                          </Card.Body>
-                        </Card>
+                          </Col>
+                        </Row>
                       </Col>
                     );
                   }
                 })}
-            </Row>
-          </Card.Body>
-
-          <Row className="w-50 m-auto">
-            <h1 className="text-light">Update Profile</h1>
-            <Form
-              noValidate
-              validated={validated}
-              onSubmit={(e) =>
-                this.handleUpdate(
-                  e,
-                  this.FirstName,
-                  this.LastName,
-                  this.Username,
-                  this.Password,
-                  this.Email,
-                  this.Birth
-                )
-              }
-            >
-              <Row>
-                <Col className=" mt-2">
-                  <Form.Group
-                    className="mb-3 w-50 d-inline-block "
-                    controlId="formBasicFirstname"
-                  >
-                    <FloatingLabel
-                      className="d-flex justify-content-start"
-                      controlId="firstname"
-                      label="First name"
-                    >
-                      <Form.Control
-                        className="py-0"
-                        type="string"
-                        placeholder="First name"
-                        onChange={(e) => this.setFirstName(e.target.value)}
-                      />
-                    </FloatingLabel>
-                  </Form.Group>
-                  <Form.Group
-                    className="mb-3 w-50 d-inline-block "
-                    controlId="formBasicLastname"
-                  >
-                    <FloatingLabel controlId="lastname" label="Last name">
-                      <Form.Control
-                        className="py-0"
-                        type="string"
-                        placeholder="Last name"
-                        onChange={(e) => this.setLastName(e.target.value)}
-                      />
-                    </FloatingLabel>
-                  </Form.Group>
-                </Col>
-              </Row>
-
-              <Form.Group className="mb-3" controlId="formBasicUsername">
-                <FloatingLabel controlId="username" label="Username">
-                  <Form.Control
-                    type="username"
-                    placeholder="Username"
-                    onChange={(e) => this.setUsername(e.target.value)}
-                  />
-                </FloatingLabel>
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formBasicPassword">
-                <FloatingLabel controlId="password" label="Password">
-                  <Form.Control
-                    type="password"
-                    placeholder="Password"
-                    onChange={(e) => this.setPassword(e.target.value)}
-                  />
-                </FloatingLabel>
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formBasicEmail">
-                <FloatingLabel controlId="email" label="Email address">
-                  <Form.Control
-                    type="email"
-                    placeholder="Email address"
-                    onChange={(e) => this.setEmail(e.target.value)}
-                  />
-                </FloatingLabel>
-              </Form.Group>
-
-              <Form.Group className="mb-3" controlId="formBasicBirthday">
-                <FloatingLabel controlId="birthdate" label="Birthdate">
-                  <Form.Control
-                    type="date"
-                    onChange={(e) => this.setBirth(e.target.value)}
-                  />{" "}
-                </FloatingLabel>
-              </Form.Group>
-
-              <Card.Body>
-                <Button
-                  className="mx-3"
-                  variant="outline-success"
-                  type="submit"
-                >
-                  Update
-                </Button>
-                <Button
-                  className="mx-3"
-                  variant="outline-danger"
-                  onClick={(e) => this.handleDeleteUser(e)}
-                >
-                  Delete
-                </Button>
-              </Card.Body>
-            </Form>
-          </Row>
-        </Card>
+              </div>
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
       </Row>
     );
   }
 }
 
 ProfileView.propTypes = {
-  user: PropTypes.shape({
-    FavoriteMovies: PropTypes.arrayOf(
-      PropTypes.shape({
-        _id: PropTypes.string.isRequired,
-        Title: PropTypes.string.isRequired,
-      })
-    ),
+  username: PropTypes.shape({
+    FavoriteMovies: PropTypes.array.isRequired,
+    FirstName: PropTypes.string.isRequired,
+    LastName: PropTypes.string.isRequired,
     Username: PropTypes.string.isRequired,
     Email: PropTypes.string.isRequired,
-    Birthdate: PropTypes.string,
+    Birth: PropTypes.string.isRequired,
   }),
 };

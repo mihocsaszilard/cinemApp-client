@@ -35,7 +35,7 @@ export function LoginView(props) {
         props.onLoggedIn(data);
       })
       .catch((e) => {
-        console.log("no such user");
+        alert("Invalid username or password!");
       });
   };
 
@@ -53,7 +53,7 @@ export function LoginView(props) {
 
             <h2 className="text-center mt-5 text-light">Please login</h2>
             <Row>
-              <Form className=" m-auto mt-3">
+              <Form className=" m-auto w-75 mt-3 full-black">
                 <Form.Group className="mb-3" controlId="formUsername">
                   <FloatingLabel controlId="username" label="Username">
                     <Form.Control
@@ -93,16 +93,16 @@ export function LoginView(props) {
               md={8}
               lg={6}
             >
-              <div className="d-inline-block text-right">Or</div>
+              <div className="d-inline-block mb-2 w-75 text-right">Or</div>
               <Button
-                className="w-25 d-inline-block"
+                className="w-50 d-inline-block"
                 variant="success"
                 type="submit"
                 onClick={handleClick}
               >
                 Register
               </Button>
-              <div className=" d-inline-block">now!</div>
+              <div className="d-inline-block w-75 mt-2 text-right">now!</div>
             </Row>
           </Row>
         </Col>

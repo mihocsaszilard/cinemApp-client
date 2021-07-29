@@ -12,7 +12,7 @@ import {
   Container,
 } from "react-bootstrap";
 
-// import "./registration-view.scss";
+import "./registration-view.scss";
 import logo from "url:../../../public/img/CinemApp2.png";
 
 export function RegistrationView(props) {
@@ -39,9 +39,11 @@ export function RegistrationView(props) {
       .then((response) => {
         const data = response.data;
         console.log(data);
+        alert("Registration successfull! Please Login.");
         window.open("/", "_self"); // the second argument '_self' is necessary so that the page will open in the current tab
       })
       .catch((e) => {
+        alert("This user is already registered.");
         console.log("error registering the user");
       });
   };
@@ -54,18 +56,20 @@ export function RegistrationView(props) {
     <>
       <Container>
         <Col xs={12} md={8} lg={6} className="d-flex mx-auto">
-          <Row className="d-flex mx-auto mt-5 justify-content-center">
-            <h3 className="text-center text-light">Welcome to</h3>
-            <Image className="w-75 d-flex mx-auto mt-2" src={logo} />
-            <h2 className="text-center mt-5 text-light">
+          <Row className="d-flex mx-auto mt-2 justify-content-center">
+            <div className="welcome-text-img">
+              <h3 className="text-center text-light">Welcome to</h3>
+              <Image className="w-75 d-flex mx-auto mt-2" src={logo} />
+            </div>
+            <h2 className="text-center mt-2 text-light">
               Please fill in all required fields
             </h2>
             <Row>
-              <Form className=" m-auto mt-3">
+              <Form className="full-black m-auto mt-3">
                 <Row>
-                  <Col className=" mt-2">
+                  <Col className=" text-center " sm={12} md={6}>
                     <Form.Group
-                      className="mb-3 w-50 d-inline-block "
+                      className="mb-3 "
                       controlId="formBasicFirstname"
                     >
                       <FloatingLabel
@@ -74,76 +78,70 @@ export function RegistrationView(props) {
                         label="First name"
                       >
                         <Form.Control
-                          className="py-0"
                           type="string"
                           placeholder="First name"
                           onChange={(e) => setFirstName(e.target.value)}
                         />
                       </FloatingLabel>
                     </Form.Group>
-                    <Form.Group
-                      className="mb-3 w-50 d-inline-block "
-                      controlId="formBasicLastname"
-                    >
+                    <Form.Group className="mb-3 " controlId="formBasicLastname">
                       <FloatingLabel controlId="lastname" label="Last name">
                         <Form.Control
-                          className="py-0"
                           type="string"
                           placeholder="Last name"
                           onChange={(e) => setLastName(e.target.value)}
                         />
                       </FloatingLabel>
                     </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicUsername">
+                      <FloatingLabel controlId="username" label="*Username">
+                        <Form.Control
+                          type="string"
+                          placeholder="Username"
+                          onChange={(e) => setUsername(e.target.value)}
+                        />
+                      </FloatingLabel>
+                    </Form.Group>
                   </Col>
+                  <Col sm={12} md={6}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                      <FloatingLabel controlId="email" label="*Email address">
+                        <Form.Control
+                          type="email"
+                          placeholder="name@example.com"
+                          onChange={(e) => setEmail(e.target.value)}
+                        />
+                      </FloatingLabel>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                      <FloatingLabel controlId="password" label="*Password">
+                        <Form.Control
+                          type="password"
+                          placeholder="Password"
+                          onChange={(e) => setPassword(e.target.value)}
+                        />
+                      </FloatingLabel>
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicBirthDate">
+                      <FloatingLabel controlId="birthdate" label="*Birth date">
+                        <Form.Control
+                          type="date"
+                          placeholder="Birth date"
+                          onChange={(e) => setBirth(e.target.value)}
+                        />
+                      </FloatingLabel>
+                    </Form.Group>
+                  </Col>
+                  <Button
+                    className="d-flex w-25 m-auto mt-5 justify-content-center"
+                    variant="success"
+                    type="submit"
+                    onClick={handleSubmit}
+                  >
+                    Register
+                  </Button>{" "}
                 </Row>
-                <Form.Group className="mb-3" controlId="formBasicUsername">
-                  <FloatingLabel controlId="username" label="*Username">
-                    <Form.Control
-                      type="string"
-                      placeholder="Username"
-                      onChange={(e) => setUsername(e.target.value)}
-                    />
-                  </FloatingLabel>
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                  <FloatingLabel controlId="email" label="*Email address">
-                    <Form.Control
-                      type="email"
-                      placeholder="name@example.com"
-                      onChange={(e) => setEmail(e.target.value)}
-                    />
-                  </FloatingLabel>
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                  <FloatingLabel controlId="password" label="*Password">
-                    <Form.Control
-                      type="password"
-                      placeholder="Password"
-                      onChange={(e) => setPassword(e.target.value)}
-                    />
-                  </FloatingLabel>
-                </Form.Group>
-
-                <Form.Group className="mb-3" controlId="formBasicBirthDate">
-                  <FloatingLabel controlId="birthdate" label="*Birth date">
-                    <Form.Control
-                      type="date"
-                      placeholder="Birth date"
-                      onChange={(e) => setBirth(e.target.value)}
-                    />
-                  </FloatingLabel>
-                </Form.Group>
-
-                <Button
-                  className="d-flex m-auto mt-5 justify-content-center"
-                  variant="success"
-                  type="submit"
-                  onClick={handleSubmit}
-                >
-                  Register
-                </Button>
               </Form>
             </Row>
             <Row

@@ -1,0 +1,37 @@
+.accordion-item .accordion-button {
+  background-color: black !important;
+  border: 0;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.image-container-profile {
+  img {
+    opacity: .8;
+  }
+}
+
+.custom-remove {
+  position: relative;
+  bottom: 250px;
+  opacity: .8;
+
+  &:hover {
+    opacity: 1;
+
+  }
+}
+
+form {
+  input {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px){
+ .custom-accordion {
+  width: 100%!important;
+ }
+}

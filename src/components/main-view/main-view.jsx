@@ -50,7 +50,6 @@ class MainView extends React.Component {
       this.getDirectors(accessToken);
       this.getGenres(accessToken);
       this.getActors(accessToken);
-      this.getUserFavs(accessToken);
     }
   }
 
@@ -117,23 +116,6 @@ class MainView extends React.Component {
       });
   }
 
-  getUserFavs(token) {
-    axios
-      .get(
-        "https://cinemapp-backend.herokuapp.com/users/" +
-          localStorage.getItem("user"),
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      )
-      .then((response) => {
-        this.setState({
-          favoriteMovies: response.data.FavoriteMovies,
-        });
-        //console.log(response.data)
-      });
-  }
-
   /*When a movie is clicked, this function is invoked and updates 
   the state of the `selectedMovie` *property to that movie*/
   setSelectedMovie(movie) {
@@ -193,7 +175,10 @@ class MainView extends React.Component {
           <Navbar.Brand>
             <Col className="toggle-nav d-block text-right">
               <Navbar.Toggle aria-controls="responsive-navbar-nav " />
-              <Navbar.Collapse id="basic-navbar-nav hamburger-button ">
+              <Navbar.Collapse
+                className="nav-elements"
+                id="basic-navbar-nav hamburger-button "
+              >
                 <Link className="custom-link mx-3" to={`/`}>
                   Movies
                 </Link>

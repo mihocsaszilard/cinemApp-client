@@ -26,17 +26,13 @@ $full-black: #000;
   background-color: $full-black; 
 }
 
-.custom-navbar {
-  width: 115vw;
-}
-
 .navbar-logo {
   height: 30px;
 }
 
 .toggle-nav {
   background-color: $full-black;
-  // margin-left: 53vw;
+  margin-left: 45vw;
   // text-align: right;
 }
 
@@ -83,18 +79,41 @@ $full-black: #000;
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 992px) and ( max-width: 1200px) {
   .toggle-nav {
     background-color: $full-black;
-    margin-left: 45vw;
+    margin-left: 30vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .toggle-nav {
+    background-color: $full-black;
+    margin-left: 2%;
   }
 }
 @media screen and (max-width: 990px){
   .cinemapp-logo {
     position: fixed;
-    left: 30%;
+    left: 50%;
+    transform: translateX(-50%);
     height: 60px;
     background-color: $full-black; 
+  }
+
+  .nav-elements {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: $full-black;
+    width: 93vw;
+    margin-top: 2%;
+    padding-bottom: 15px;
+    .custom-link {
+      margin-bottom: 5px;
+      font-size: 35px;
+     
+    }
   }
 }
   

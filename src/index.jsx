@@ -11,7 +11,7 @@ import "./index.scss";
 class CinemApplication extends React.Component {
   render() {
     return (
-      <Container>
+      <Container className="m-auto">
         <MainView />
       </Container>
     );
