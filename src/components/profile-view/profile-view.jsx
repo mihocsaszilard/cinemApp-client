@@ -339,7 +339,7 @@ export class ProfileView extends React.Component {
                             lg={5}
                           >
                             <img
-                              className="w-100 m-auto mt-2"
+                              className="w-75 m-auto mt-2"
                               key={movie._id}
                               src={movie.ImgPath}
                             />
