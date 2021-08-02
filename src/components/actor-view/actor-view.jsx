@@ -10,15 +10,21 @@ export class ActorView extends React.Component {
     const { actor } = this.props;
     return (
       <Container className="mt-5">
-        <Col>
-          <Row className="text-white ">
-            <h1 className="aqua-text">{actor.Name}</h1>
+        <Row className="text-white ">
+          <h1 className="aqua-text">{actor.Name}</h1>
+          <p className="actor-birth mt-2">
+            <span>Born: </span>
+            {new Date(actor.Birth).toLocaleDateString()}
+          </p>
+          {/* <Col xs={12} md={5}></Col> */}
+          <Row>
+            <Col className="text-white">
+              {" "}
+              <img className="actor-img w-50 m-auto " src={actor.ActorImg} />
+              <p className="actor-bio">{actor.Bio}</p>
+            </Col>
           </Row>
-          <Row className="text-white">
-            <p className="actor-birth">{actor.Birth}</p>
-            <p className="actor-bio">{actor.Bio}</p>
-          </Row>
-        </Col>
+        </Row>
       </Container>
     );
   }
@@ -28,6 +34,7 @@ ActorView.propTypes = {
   actor: PropTypes.shape({
     Name: PropTypes.string.isRequired,
     Bio: PropTypes.string.isRequired,
+    ActorImg: PropTypes.string.isRequired,
     Birth: PropTypes.string.isRequired,
   }).isRequired,
 };

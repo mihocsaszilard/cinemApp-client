@@ -10,17 +10,22 @@ export class DirectorView extends React.Component {
     const { director } = this.props;
     return (
       <Container className="director-container mt-5">
-        <Col>
-          <Row className="text-white ">
-            <h1 className="aqua-text">{director.Name}</h1>
-          </Row>
-          <Row className="text-white">
-            <p className="director-description">
-              <span>Born:</span> {director.Birthyear}
-            </p>
-            <p> {director.Bio} </p>
-          </Row>
-        </Col>
+        <Row className="text-white ">
+          <h1 className="aqua-text">{director.Name}</h1>
+          <p className="director-description">
+            <span>Born: </span>
+            {new Date(director.Birthyear).toLocaleDateString()}
+          </p>
+        </Row>
+        <Row className="d-flex text-white director-card">
+          <Col xs={12}>
+            <img
+              className="w-50 d-flex director-img"
+              src={director.DirectorImg}
+            />
+            <p className="director-bio"> {director.Bio} </p>
+          </Col>
+        </Row>
       </Container>
     );
   }

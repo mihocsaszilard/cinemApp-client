@@ -1091,7 +1091,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","react-dom":"2sg1U","./components/main-view/main-view":"67PhB","./index.scss":"3N0O7","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","react-bootstrap":"4n7hB","react-router-dom":"1PMSK"}],"3b2NM":[function(require,module,exports) {
+},{"react":"3b2NM","react-dom":"2sg1U","./components/main-view/main-view":"67PhB","./index.scss":"5iJih","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","react-bootstrap":"4n7hB","react-router-dom":"1PMSK"}],"3b2NM":[function(require,module,exports) {
 "use strict";
 if ("development" === 'production') {
   module.exports = require('./cjs/react.production.min.js');
@@ -49099,57 +49099,68 @@ try {
             lineNumber: 12,
             columnNumber: 7
           }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Row, {
+          className: "text-white ",
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 13,
             columnNumber: 9
           }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Row, {
-          className: "text-white ",
+        }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+          className: "aqua-text",
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 14,
             columnNumber: 11
           }
-        }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
-          className: "aqua-text",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 15,
-            columnNumber: 13
-          }
-        }, director.Name)), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Row, {
-          className: "text-white",
-          __self: this,
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 17,
-            columnNumber: 11
-          }
-        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+        }, director.Name), /*#__PURE__*/_reactDefault.default.createElement("p", {
           className: "director-description",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 18,
-            columnNumber: 13
+            lineNumber: 15,
+            columnNumber: 11
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("span", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 19,
-            columnNumber: 15
+            lineNumber: 16,
+            columnNumber: 13
           }
-        }, "Born:"), " ", director.Birthyear), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        }, "Born: "), new Date(director.Birthyear).toLocaleDateString())), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Row, {
+          className: "d-flex text-white director-card",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 20,
+            columnNumber: 9
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
+          xs: 12,
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 21,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+          className: "w-50 d-flex director-img",
+          src: director.DirectorImg,
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 22,
+            columnNumber: 13
+          }
+        }), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          className: "director-bio",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 26,
             columnNumber: 13
           }
         }, " ", director.Bio, " "))))
@@ -49286,54 +49297,70 @@ try {
             lineNumber: 12,
             columnNumber: 7
           }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Row, {
+          className: "text-white ",
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 13,
             columnNumber: 9
           }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Row, {
-          className: "text-white ",
+        }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+          className: "aqua-text",
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 14,
             columnNumber: 11
           }
-        }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
-          className: "aqua-text",
+        }, actor.Name), /*#__PURE__*/_reactDefault.default.createElement("p", {
+          className: "actor-birth mt-2",
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 15,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement("span", {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 16,
             columnNumber: 13
           }
-        }, actor.Name)), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Row, {
+        }, "Born: "), new Date(actor.Birth).toLocaleDateString()), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Row, {
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 20,
+            columnNumber: 11
+          }
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
           className: "text-white",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 17,
-            columnNumber: 11
+            lineNumber: 21,
+            columnNumber: 13
           }
-        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
-          className: "actor-birth",
+        }, " ", /*#__PURE__*/_reactDefault.default.createElement("img", {
+          className: "actor-img w-50 m-auto ",
+          src: actor.ActorImg,
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 18,
-            columnNumber: 13
+            lineNumber: 23,
+            columnNumber: 15
           }
-        }, actor.Birth), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        }), /*#__PURE__*/_reactDefault.default.createElement("p", {
           className: "actor-bio",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 19,
-            columnNumber: 13
+            lineNumber: 24,
+            columnNumber: 15
           }
-        }, actor.Bio))))
+        }, actor.Bio)))))
       );
     }
   }
@@ -49341,6 +49368,7 @@ try {
     actor: _propTypesDefault.default.shape({
       Name: _propTypesDefault.default.string.isRequired,
       Bio: _propTypesDefault.default.string.isRequired,
+      ActorImg: _propTypesDefault.default.string.isRequired,
       Birth: _propTypesDefault.default.string.isRequired
     }).isRequired
   };
@@ -50033,6 +50061,6 @@ const context = /*#__PURE__*/_react.createContext({
 context.displayName = 'AccordionItemContext';
 exports.default = context;
 
-},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"3N0O7":[function() {},{}]},["1j6wU","68WUB","1DVjT"], "1DVjT", "parcelRequire65a2")
+},{"react":"3b2NM","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5iJih":[function() {},{}]},["1j6wU","68WUB","1DVjT"], "1DVjT", "parcelRequire65a2")
 
 //# sourceMappingURL=index.02675e63.js.map
