@@ -122,7 +122,6 @@
     font-size: 35px;
   }
 }
-
 *,
 body {
   box-sizing: border-box;
@@ -157,6 +156,7 @@ label,
     display: none;
   }
 }
+
 
 
 .accordion-item .accordion-button {
