@@ -25,7 +25,7 @@ import {
   Image,
   Nav,
 } from "react-bootstrap";
-import logo from "url:../../../public/img/CinemApp2.png";
+import logo from "url:../../../public/img/CinemApp.png";
 
 import "./main-view.scss";
 

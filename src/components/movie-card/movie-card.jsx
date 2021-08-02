@@ -4,6 +4,7 @@ import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import "../movie-card/movie-card.scss";
+import star from "url:../../../public/img/star.png";
 
 export class MovieCard extends React.Component {
   render() {
@@ -17,6 +18,15 @@ export class MovieCard extends React.Component {
             <Card.Img className="card-img" src={movie.ImgPath} />
           </Link>
         </Card.Body>
+        <Link to={`/movies/${movie._id}`}>
+          <div className="title-container text-white">
+            <p className="card-title">{movie.Title}</p>
+            <p className="rating">
+              {" "}
+              <img className="star" src={star} /> {movie.Rating}
+            </p>
+          </div>{" "}
+        </Link>
       </Card>
     );
   }
@@ -24,9 +34,9 @@ export class MovieCard extends React.Component {
 
 MovieCard.propTypes = {
   movieData: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    image: PropTypes.string.isRequired,
+    Title: PropTypes.string.isRequired,
+    Rating: PropTypes.number.isRequired,
+    ImgPath: PropTypes.string.isRequired,
   }),
   // onMovieClick: PropTypes.func.isRequired,
 };

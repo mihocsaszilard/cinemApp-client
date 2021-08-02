@@ -19,11 +19,17 @@ $full-black: #000;
 
 .cinemapp-logo {
   position: fixed;
-  left: 10%;
+  left: 1%;
   top:0;
-  padding-top: 25px;
-  height: 80px;
+  padding-top: 15px;
+  height: 64px;
+  width: 25%;
   background-color: $full-black; 
+  text-align: center;
+}
+
+.nav-elements {
+  box-shadow: 0px 0px 0px 15px  $full-black;
 }
 
 .navbar-logo {

@@ -13,6 +13,34 @@
 .card-img {
   overflow: hidden;
 }
+
+.title-container {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), black);
+}
+.title-container .card-title {
+  font-size: 20px;
+  position: absolute;
+  bottom: 5%;
+  width: 70%;
+  text-align: left;
+  margin-left: 10px;
+}
+.title-container .rating {
+  position: absolute;
+  bottom: 0;
+  right: inherit;
+  text-align: right;
+  margin-right: 10px;
+}
+.title-container .star {
+  height: 24px;
+  margin-bottom: 7px;
+}
 .movie-poster {
   box-shadow: 0 0 200px #161616;
 }
@@ -34,11 +62,17 @@
 
 .cinemapp-logo {
   position: fixed;
-  left: 10%;
+  left: 1%;
   top: 0;
-  padding-top: 25px;
-  height: 80px;
+  padding-top: 15px;
+  height: 64px;
+  width: 25%;
   background-color: #000;
+  text-align: center;
+}
+
+.nav-elements {
+  box-shadow: 0px 0px 0px 15px #000;
 }
 
 .navbar-logo {
@@ -190,6 +224,12 @@ label,
 
 .image-container-profile img {
   opacity: 0.8;
+}
+
+.profile-view h3 {
+  width: 950px;
+  padding-left: 50px;
+  border-bottom: 1px solid white;
 }
 
 .custom-remove {

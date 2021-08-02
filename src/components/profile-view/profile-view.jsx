@@ -67,7 +67,6 @@ export class ProfileView extends React.Component {
         this.setState({
           FavoriteMovies: response.data.FavoriteMovies,
         });
-        console.log(response.data, "favs");
       });
   }
 
@@ -201,9 +200,7 @@ export class ProfileView extends React.Component {
         <Accordion defaultActiveKey="0" className=" m-auto custom-accordion">
           <Accordion.Item className="full-black" eventKey="0">
             <Accordion.Header>
-              <Button variant="outline-primary" className="m-auto">
-                Update Profile
-              </Button>
+              <h3 className="m-auto aqua-text">Update Profile</h3>
             </Accordion.Header>
             <Accordion.Body className="full-black w-100">
               <Form
@@ -316,9 +313,7 @@ export class ProfileView extends React.Component {
 
           <Accordion.Item className="text-light full-black m-auto" eventKey="1">
             <Accordion.Header className="text-light full-black mt-md-5">
-              <Button variant="outline-primary" className="m-auto">
-                Favorites
-              </Button>
+              <h3 className="m-auto aqua-text">Favorites</h3>
             </Accordion.Header>
 
             <Accordion.Body className="text-center full-black" sm={12} md={6}>
@@ -345,6 +340,7 @@ export class ProfileView extends React.Component {
                           >
                             <img
                               className="w-100 m-auto mt-2"
+                              key={movie._id}
                               src={movie.ImgPath}
                             />
 

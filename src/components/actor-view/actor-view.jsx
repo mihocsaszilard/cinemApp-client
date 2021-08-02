@@ -36,5 +36,6 @@ ActorView.propTypes = {
     Bio: PropTypes.string.isRequired,
     ActorImg: PropTypes.string.isRequired,
     Birth: PropTypes.string.isRequired,
+    ActorImg: PropTypes.string,
   }).isRequired,
 };
