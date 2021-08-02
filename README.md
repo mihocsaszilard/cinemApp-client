@@ -2,7 +2,7 @@
 
 <h2>Objective</h2>
   <p>
-  Using React, build the client-side for an application called myFlix based on its existing
+  Using React, build the client-side for an application called cinemApp based on its existing
   server-side code (REST API and database).
   </p>
   
