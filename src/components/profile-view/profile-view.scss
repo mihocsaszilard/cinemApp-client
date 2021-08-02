@@ -1,0 +1,52 @@
+.accordion-item .accordion-button {
+  background-color:  rgb(22, 22, 22)!important;
+  border: 0; 
+}
+
+.accordion-button {
+  
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.image-container-profile {
+  img {
+    opacity: .8;
+  }
+}
+
+.profile-view {
+  h3 {
+    border-bottom: 1px solid #fff;
+    width: 990px;
+    
+    // &:hover {
+      
+    // }
+  }
+}
+
+.custom-remove {
+  position: relative;
+  bottom: 250px;
+  opacity: .8;
+
+  &:hover {
+    opacity: 1;
+
+  }
+}
+
+form {
+  input {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px){
+ .custom-accordion {
+  width: 100%!important;
+ }
+}
