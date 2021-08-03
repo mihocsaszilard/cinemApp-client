@@ -11,19 +11,19 @@ export class ActorView extends React.Component {
     return (
       <Container className="mt-5">
         <Row className="text-white ">
-          <h1 className="aqua-text">{actor.Name}</h1>
+          <h1 className="aqua-text actor-name">{actor.Name}</h1>
           <p className="actor-birth mt-2">
             <span>Born: </span>
             {new Date(actor.Birth).toLocaleDateString()}
           </p>
           {/* <Col xs={12} md={5}></Col> */}
-          <Row>
-            <Col className="text-white">
-              {" "}
-              <img className="actor-img w-50 m-auto " src={actor.ActorImg} />
-              <p className="actor-bio">{actor.Bio}</p>
-            </Col>
-          </Row>
+        </Row>
+        <Row>
+          <Col className="text-white dates-container">
+            {" "}
+            <img className="actor-img w-25 m-auto " src={actor.ActorImg} />
+            <p className="actor-bio">{actor.Bio}</p>
+          </Col>
         </Row>
       </Container>
     );
