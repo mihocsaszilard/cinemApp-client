@@ -26,3 +26,10 @@ label,
   width: 100px;
   margin-top: 2%;
 }
+
+@media screen and (max-width: 400px){
+ 
+.welcome-text-img {
+  display: none;
+} 
+}

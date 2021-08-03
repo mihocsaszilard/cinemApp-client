@@ -36,5 +36,6 @@ DirectorView.propTypes = {
     Name: PropTypes.string.isRequired,
     Bio: PropTypes.string.isRequired,
     Birthyear: PropTypes.string.isRequired,
+    DirectorImg: PropTypes.string,
   }).isRequired,
 };

@@ -13,3 +13,31 @@
 .card-img {
   overflow: hidden;
 }
+
+.title-container {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .2), rgba(0, 0, 0, 1));
+  .card-title {
+    font-size: 20px;
+    position: absolute;
+    bottom: 5%;
+    width: 70%;
+    text-align: left;
+    margin-left: 10px;
+  }
+  .rating {
+    position: absolute;
+    bottom: 0;
+    right: inherit;
+    text-align: right;
+    margin-right: 10px;
+  }
+  .star {
+    height: 24px;
+    margin-bottom: 7px;
+  }
+}

@@ -1,3 +1,5 @@
+$full-black: #000;
+
 .movie-card-col {
   height: 435px;
   overflow: hidden;
@@ -9,3 +11,115 @@
   }
   transition: .4s ease-in-out; 
 }
+
+.full-black {
+  background-color: $full-black; 
+  z-index: 90;
+}
+
+.cinemapp-logo {
+  position: fixed;
+  left: 1%;
+  top:0;
+  padding-top: 15px;
+  height: 64px;
+  width: 25%;
+  background-color: $full-black; 
+  text-align: center;
+}
+
+.nav-elements {
+  box-shadow: 0px 0px 0px 13px  $full-black;
+}
+
+.navbar-logo {
+  height: 30px;
+}
+
+.toggle-nav {
+  background-color: $full-black;
+  margin-left: 45vw;
+  // text-align: right;
+}
+
+.logout-button {
+  z-index: 1022;
+}
+
+.light-animation { 
+  border-radius: 50%;
+  box-shadow: -50px -50px 500px rgba(255, 238, 0, 0.2);
+  width: 600px;
+  height: 600px;
+  position: fixed;
+  left: -10%;
+  bottom: -25%;
+  animation: slide 60s ease-in-out infinite alternate both;
+}
+
+@keyframes slide {
+  0% {
+           
+    left: -10%;
+    bottom: -65%;
+  }
+  25% {
+            
+    left: 100%;
+    bottom: -65%;  
+  }
+  50% {
+            
+    left: 100%;
+    bottom: 90%;  
+  }
+  75% {
+            
+    left: 100%;
+    bottom: -65%;  
+  }
+  100% {
+            
+    left: -10%;
+    bottom: -65%;  
+  }
+}
+
+@media screen and (min-width: 992px) and ( max-width: 1200px) {
+  .toggle-nav {
+    background-color: $full-black;
+    margin-left: 30vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .toggle-nav {
+    background-color: $full-black;
+    margin-left: 2%;
+  }
+}
+@media screen and (max-width: 990px){
+  .cinemapp-logo {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60px;
+    background-color: $full-black; 
+  }
+
+  .nav-elements {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: $full-black;
+    width: 93vw;
+    margin-top: 2%;
+    padding-bottom: 15px;
+    .custom-link {
+      margin-bottom: 5px;
+      font-size: 35px;
+     
+    }
+  }
+}
+  

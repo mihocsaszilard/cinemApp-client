@@ -1,11 +1,9 @@
 import React from "react";
-import axios from "axios";
 import PropTypes from "prop-types";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Button from "react-bootstrap/Button";
+import { Row, Col, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-// import "./movie-view.scss";
+import "./movie-view.scss";
 
 export class MovieView extends React.Component {
   constructor() {
@@ -15,23 +13,24 @@ export class MovieView extends React.Component {
 
   render() {
     const { movie, onBackClick } = this.props;
-
     return (
-      <Row className="movie-view mt-5">
-        <Col xs={12} md={6} className="movie-poster">
-          <img className="w-75" src={movie.ImgPath} />
+      <Row className="movie-view mt-5 m-auto ">
+        <Col md={12} lg={6} className="movie-poster ">
+          <img className="w-100" src={movie.ImgPath} />
         </Col>
-        <Col xs={12} md={6} className="movie-body text-light">
+        <Col md={12} lg={6} className="movie-body text-light my-auto">
           <div className="movie-title">
             <span className="label"> </span>
-            <h1 className="value">{movie.Title}</h1>
+            <h1 className="value aqua-text">{movie.Title}</h1>
           </div>
           <div className="movie-genre">
             <span className="label"></span>
             {movie.Genre.map((Genre) => (
-              <h2 key={Genre._id} className="value">
-                {Genre.Name}
-              </h2>
+              <Link key={Genre._id} to={`/genres/${Genre.Name}`}>
+                <Button className="custom-link " variant="link">
+                  <h4>{Genre.Name}</h4>
+                </Button>
+              </Link>
             ))}
           </div>
           <div className="movie-description">
@@ -39,20 +38,27 @@ export class MovieView extends React.Component {
             <span className="value">{movie.Description}</span>
           </div>
           <div className="movie-director mt-5">
-            <span className="label">Directed by </span>
+            <span className="label">Directed by:</span>
             {movie.Director.map((Director) => (
-              <h2 key={Director._id} className="value">
-                {Director.Name}
-              </h2>
+              <Link key={Director._id} to={`/directors/${Director.Name}`}>
+                <Button className="custom-link " variant="link">
+                  <h3>{Director.Name}</h3>
+                </Button>
+              </Link>
             ))}
           </div>
           <div className="movie-actors mt-4">
             <span className="label">Casting </span>
-            {movie.Actors.map((Actors) => (
-              <h2 key={Actors._id} className="value actors">
-                {Actors.Name}
-              </h2>
-            ))}
+            <h2>
+              {" "}
+              {movie.Actors.map((Actor) => (
+                <Link key={Actor._id} to={`/actors/${Actor.Name}`}>
+                  <Button className="custom-link " variant="link">
+                    <h3>{Actor.Name}</h3>
+                  </Button>
+                </Link>
+              ))}
+            </h2>
           </div>
 
           <Button
@@ -79,5 +85,4 @@ MovieView.propTypes = {
     Director: PropTypes.array.isRequired,
     Actors: PropTypes.array.isRequired,
   }),
-  // onMovieClick: PropTypes.func.isRequired,
 };
