@@ -1,0 +1,11 @@
+.movie-card-col {
+  height: 435px;
+  overflow: hidden;
+  z-index: 9;
+  &:hover,
+  &:active {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+  transition: .4s ease-in-out; 
+}

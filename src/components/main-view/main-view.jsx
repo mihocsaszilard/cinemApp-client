@@ -5,6 +5,9 @@ import { MovieCard } from "../movie-card/movie-card";
 import { MovieView } from "../movie-view/movie-view";
 import { LoginView } from "../login-view/login-view";
 import { RegistrationView } from "../registration-view/registration-view";
+import { Container } from "react-bootstrap";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 import "./main-view.scss";
 
@@ -55,36 +58,22 @@ class MainView extends React.Component {
     });
   }
 
-  getGenres() {
-    axios
-      .get("https://cinemapp-backend.herokuapp.com/genres")
-      .then((response) => {
-        this.setState({
-          genres: response.data,
-        });
-        console.log(response.data);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
-
   render() {
-    const { movies, selectedMovie, user, register, genres } = this.state;
+    const { movies, selectedMovie, user } = this.state;
 
     /* If there is not registered user, the RegisterView is rendered. If there is a user registered,
      the user details are *passed as a prop to the LoginView*/
-    if (!register)
-      return (
-        <RegistrationView
-          onRegistration={(register) => this.onRegistration(register)}
-        />
-      );
+    if (!user)
+      return <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />;
 
     /* If there is no user, the LoginView is rendered. If there is a user logged in,
      the user details are *passed as a prop to the LoginView*/
     if (!user)
-      return <LoginView onLoggedIn={(user) => this.onLoggedIn(user)} />;
+      return (
+        <RegistrationView
+          onRegistration={(user) => this.onRegistration(user)}
+        />
+      );
 
     // Before the movies have been loaded
     if (movies.length === 0) return <div className="main-view" />;
@@ -95,22 +84,36 @@ class MainView extends React.Component {
           /*If the state of `selectedMovie` is not null, that selected movie 
           will be returned otherwise, all *movies will be returned*/
           selectedMovie ? (
-            <MovieView
-              movie={selectedMovie}
-              onBackClick={(newSelectedMovie) => {
-                this.setSelectedMovie(newSelectedMovie);
-              }}
-            />
+            <Row className="justify-content-md-center">
+              <Col xs={12} md={8}>
+                <MovieView
+                  movie={selectedMovie}
+                  onBackClick={(newSelectedMovie) => {
+                    this.setSelectedMovie(newSelectedMovie);
+                  }}
+                />
+              </Col>
+            </Row>
           ) : (
-            movies.map((movie) => (
-              <MovieCard
-                key={movie._id}
-                movieData={movie}
-                onMovieClick={(newSelectedMovie) => {
-                  this.setSelectedMovie(newSelectedMovie);
-                }}
-              />
-            ))
+            <Row className="justify-content-md-center">
+              {movies.map((movie) => (
+                <Col
+                  className="my-2 movie-card-col"
+                  xs={12}
+                  md={8}
+                  lg={4}
+                  xl={3}
+                >
+                  <MovieCard
+                    key={movie._id}
+                    movieData={movie}
+                    onMovieClick={(newSelectedMovie) => {
+                      this.setSelectedMovie(newSelectedMovie);
+                    }}
+                  />
+                </Col>
+              ))}
+            </Row>
           )
         }
       </div>

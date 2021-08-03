@@ -1,8 +1,11 @@
 import React from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
 
-import "./movie-view.scss";
+// import "./movie-view.scss";
 
 export class MovieView extends React.Component {
   constructor() {
@@ -10,70 +13,59 @@ export class MovieView extends React.Component {
     this.state = {};
   }
 
-  componentDidMount() {
-    axios
-      .get("https://cinemapp-backend.herokuapp.com/genres")
-      .then((response) => {
-        this.setState({
-          genres: response.data,
-        });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
-
   render() {
     const { movie, onBackClick } = this.props;
 
     return (
-      <div className="movie-view">
-        <div className="movie-poster">
-          <img src={movie.ImgPath} />
-        </div>
-        <div className="movie-body">
+      <Row className="movie-view mt-5">
+        <Col xs={12} md={6} className="movie-poster">
+          <img className="w-75" src={movie.ImgPath} />
+        </Col>
+        <Col xs={12} md={6} className="movie-body text-light">
           <div className="movie-title">
             <span className="label"> </span>
-            <span className="value">{movie.Title}</span>
+            <h1 className="value">{movie.Title}</h1>
           </div>
           <div className="movie-genre">
             <span className="label"></span>
             {movie.Genre.map((Genre) => (
-              <span key={Genre._id} className="value">
+              <h2 key={Genre._id} className="value">
                 {Genre.Name}
-              </span>
+              </h2>
             ))}
           </div>
           <div className="movie-description">
             <span className="label"> </span>
             <span className="value">{movie.Description}</span>
           </div>
-          <div className="movie-director">
+          <div className="movie-director mt-5">
             <span className="label">Directed by </span>
             {movie.Director.map((Director) => (
-              <span key={Director._id} className="value">
+              <h2 key={Director._id} className="value">
                 {Director.Name}
-              </span>
+              </h2>
             ))}
           </div>
-          <div className="movie-actors">
+          <div className="movie-actors mt-4">
             <span className="label">Casting </span>
             {movie.Actors.map((Actors) => (
-              <span key={Actors._id} className="value actors">
+              <h2 key={Actors._id} className="value actors">
                 {Actors.Name}
-              </span>
+              </h2>
             ))}
           </div>
 
-          <button
+          <Button
+            className=" mt-4"
+            variant="outline-light"
             onClick={() => {
               onBackClick(null);
             }}
           >
             Back
-          </button>
-        </div>
-      </div>
+          </Button>
+        </Col>
+      </Row>
     );
   }
 }

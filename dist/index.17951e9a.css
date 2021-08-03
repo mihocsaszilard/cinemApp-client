@@ -3,131 +3,31 @@
 }
 
 .card-container {
-  display: inline-block;
+  background-color: black !important;
 }
 
-.movie-card {
-  height: auto;
-  width: 250px;
-  margin: 10px 20px;
-  transition: 0.4s ease-in-out;
-}
-.movie-card:hover, .movie-card:active {
-  transform: scale(1.1);
-  cursor: pointer;
+.card-body {
+  background-color: black !important;
 }
 
 .card-img {
-  width: 250px;
-  height: 450px;
-  box-shadow: 0 0 5px 2px black;
   overflow: hidden;
 }
-.movie-view {
-  box-sizing: border-box;
-  display: block;
-  text-align: center;
-  width: 90%;
-  height: 98vh;
-  margin: auto;
-  padding: 1.5%;
-  background-color: lavender;
-  border-radius: 10px;
+.movie-card-col {
+  height: 435px;
+  overflow: hidden;
+  z-index: 9;
+  transition: 0.4s ease-in-out;
 }
-
-.movie-view div {
-  margin-top: 1%;
+.movie-card-col:hover, .movie-card-col:active {
+  transform: scale(1.1);
+  cursor: pointer;
 }
-
-.movie-poster img {
-  height: 800px;
-  float: left;
-}
-
-.movie-title {
-  font-size: 50px;
-  margin-top: 15%;
-}
-
-.movie-genre,
-.movie-director,
-.movie-actors {
-  font-weight: bold;
-}
-
-.movie-body {
-  font-size: 22px;
-  width: 60%;
-  margin: auto;
-  margin-left: 40%;
-  padding-top: 200px;
-}
-
-.actors {
-  display: block;
-}
-
-.label {
-  font-weight: 400;
-}
-*,
-body {
-  box-sizing: border-box;
-}
-
-form {
-  display: block;
-  text-align: center;
-  width: 300px;
-  margin: auto;
-  margin-top: 15%;
-  padding: 1.5%;
-  background-color: lavender;
-  border-radius: 10px;
-}
-
-label,
-.loginBtn {
-  display: block;
-  width: 250px;
-  margin: auto;
-  margin-top: 1%;
-}
-
-.loginBtn {
-  width: 100px;
-  margin-top: 2%;
-}
-*,
-body {
-  box-sizing: border-box;
-}
-
-form {
-  display: block;
-  text-align: center;
-  width: 300px;
-  margin: auto;
-  margin-top: 15%;
-  padding: 1.5%;
-  background-color: lavender;
-  border-radius: 10px;
-}
-
-label,
-.registerBtn {
-  display: block;
-  width: 200px;
-  margin: auto;
-  margin-top: 1%;
-}
-
-.registerBtn {
-  width: 100px;
-  margin-top: 2%;
-}
-
 .my-flix {
   color: coral;
+}
+
+.full-black {
+  background-color: #000;
 }
 /*# sourceMappingURL=index.17951e9a.css.map */
