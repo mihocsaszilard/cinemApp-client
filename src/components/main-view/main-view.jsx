@@ -153,6 +153,7 @@ class MainView extends React.Component {
   render() {
     const { movies, user, favoriteMovies, directors, genres, actors } =
       this.state;
+
     return (
       <Router>
         <Navbar
