@@ -1,0 +1,28 @@
+*,
+body {
+  box-sizing: border-box;
+}
+
+form {
+  display: block;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  margin-top: 15%;
+  padding: 1.5%;
+  background-color: lavender;
+  border-radius: 10px;
+}
+
+label,
+.registerBtn {
+  display: block;
+  width: 200px;
+  margin: auto;
+  margin-top: 1%;
+}
+
+.registerBtn {
+  width: 100px;
+  margin-top: 2%;
+}

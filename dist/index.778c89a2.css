@@ -1,0 +1,26 @@
+*, body {
+  box-sizing: border-box;
+}
+
+form {
+  display: block;
+  text-align: center;
+  margin-top: 20%;
+}
+
+label,
+button {
+  display: block;
+  border: 1px solid black;
+  width: 200px;
+  margin: auto;
+  margin-top: 1%;
+}
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;1,200&display=swap");
+label {
+  font-family: "prompt";
+}
+.my-flix {
+  color: coral;
+}
+/*# sourceMappingURL=index.778c89a2.css.map */
