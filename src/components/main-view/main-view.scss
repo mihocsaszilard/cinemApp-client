@@ -97,6 +97,10 @@ $full-black: #000;
     background-color: $full-black;
     margin-left: 2%;
   }
+
+  .light-animation {
+    display: none;
+  }
 }
 @media screen and (max-width: 990px){
   .cinemapp-logo {
@@ -118,8 +122,7 @@ $full-black: #000;
     .custom-link {
       margin-bottom: 5px;
       font-size: 35px;
-     
-    }
+     }
   }
 }
   

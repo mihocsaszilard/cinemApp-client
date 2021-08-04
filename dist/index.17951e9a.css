@@ -132,6 +132,10 @@
     background-color: #000;
     margin-left: 2%;
   }
+
+  .light-animation {
+    display: none;
+  }
 }
 @media screen and (max-width: 990px) {
   .cinemapp-logo {
