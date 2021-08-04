@@ -58,8 +58,8 @@ export function RegistrationView(props) {
         <Col xs={12} md={8} lg={6} className="d-flex mx-auto">
           <Row className="d-flex mx-auto mt-2 justify-content-center">
             <div className="welcome-text-img">
-              <h3 className="text-center text-light">Welcome to</h3>
-              <Image className="w-75 d-flex mx-auto mt-2" src={logo} />
+              <h3 className="text-center text-light">Welcome to cinemApp</h3>
+              <Image className="w-75 d-flex mx-auto mt-2 logo" src={logo} />
             </div>
             <h2 className="text-center mt-2 text-light">
               Please fill in all required fields

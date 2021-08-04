@@ -205,7 +205,7 @@ export class ProfileView extends React.Component {
             <Accordion.Body className="full-black w-100">
               <Form
                 noValidate
-                className="w-75 my-auto full-black"
+                className="w-100 my-auto full-black"
                 validated={validated}
                 onSubmit={(e) =>
                   this.handleUpdate(
@@ -220,7 +220,7 @@ export class ProfileView extends React.Component {
                 }
               >
                 <Row>
-                  <Col>
+                  <Col xs={12} md={6}>
                     <Form.Group
                       className="mb-3  "
                       controlId="formBasicFirstname"
@@ -258,7 +258,7 @@ export class ProfileView extends React.Component {
                       </FloatingLabel>
                     </Form.Group>
                   </Col>
-                  <Col>
+                  <Col xs={12} md={6}>
                     <Form.Group
                       className="mb-3  "
                       controlId="formBasicLastname"

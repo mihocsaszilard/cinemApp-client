@@ -48552,8 +48552,8 @@ try {
           lineNumber: 51,
           columnNumber: 13
         }
-      }, "Welcome to"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Image, {
-        className: "w-75 d-flex mx-auto mt-2",
+      }, "Welcome to cinemApp"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Image, {
+        className: "w-75 d-flex mx-auto mt-2 logo",
         src: _urlPublicImgCinemApp2PngDefault.default,
         __self: this,
         __source: {
@@ -48812,8 +48812,8 @@ try {
           lineNumber: 61,
           columnNumber: 15
         }
-      }, "Welcome to"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Image, {
-        className: "w-75 d-flex mx-auto mt-2",
+      }, "Welcome to cinemApp"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Image, {
+        className: "w-75 d-flex mx-auto mt-2 logo",
         src: _urlPublicImgCinemApp2PngDefault.default,
         __self: this,
         __source: {
@@ -49649,7 +49649,7 @@ try {
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form, {
           noValidate: true,
-          className: "w-75 my-auto full-black",
+          className: "w-100 my-auto full-black",
           validated: validated,
           onSubmit: e => this.handleUpdate(e, this.FirstName, this.LastName, this.Username, this.Password, this.Email, this.Birth),
           __self: this,
@@ -49666,6 +49666,8 @@ try {
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
+          xs: 12,
+          md: 6,
           __self: this,
           __source: {
             fileName: _jsxFileName,
@@ -49758,6 +49760,8 @@ try {
             columnNumber: 25
           }
         })))), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
+          xs: 12,
+          md: 6,
           __self: this,
           __source: {
             fileName: _jsxFileName,
