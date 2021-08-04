@@ -197,6 +197,10 @@ label,
   .welcome-text-img {
     display: none;
   }
+
+  .logo {
+    display: none;
+  }
 }
 .director-img {
   float: left;

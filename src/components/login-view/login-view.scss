@@ -30,3 +30,10 @@ label,
 .logo {
   opacity: 0;
 }
+
+
+@media screen and (max-width: 400px){
+  .logo {
+    display: none;
+  }
+}

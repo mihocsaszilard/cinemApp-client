@@ -48562,7 +48562,7 @@ try {
           columnNumber: 13
         }
       }), /*#__PURE__*/_reactDefault.default.createElement("h2", {
-        className: "text-center mt-5 text-light",
+        className: "text-center mt-3 text-light",
         __self: this,
         __source: {
           fileName: _jsxFileName,

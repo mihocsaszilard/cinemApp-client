@@ -51,7 +51,7 @@ export function LoginView(props) {
             <h3 className="text-center text-light">Welcome to cinemApp</h3>
             <Image className="w-75 d-flex mx-auto mt-2 logo" src={logo} />
 
-            <h2 className="text-center mt-5 text-light">Please login</h2>
+            <h2 className="text-center mt-3 text-light">Please login</h2>
             <Row>
               <Form className=" m-auto w-75 mt-3 full-black">
                 <Form.Group className="mb-3" controlId="formUsername">
