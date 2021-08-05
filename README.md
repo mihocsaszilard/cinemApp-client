@@ -1,7 +1,7 @@
 <h1>cinemApp Client</h1>
 
 <p align="center">
-  <img src="./public/img/cinemApp-preview.PNG" title="site preview">
+  <img src="./main/public/img/cinemApp-preview.PNG" title="site preview">
 </p>
 
 <h2>Objective</h2>
