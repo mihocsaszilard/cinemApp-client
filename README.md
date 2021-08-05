@@ -1,5 +1,7 @@
 <h1>cinemApp Client</h1>
 
+[Site Preview](https://github.com/mihocsaszilard/cinemApp-client/blob/main/public/img/cinemApp-preview.png?raw=true)
+
 <h2>Objective</h2>
   <p>
   Using React, build the client-side for an application called cinemApp based on its existing
