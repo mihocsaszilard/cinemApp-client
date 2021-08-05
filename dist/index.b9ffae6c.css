@@ -176,11 +176,6 @@ label,
   border-left: 1px solid white;
 }
 
-.director-card:hover {
-  box-shadow: 0 0 30px rgba(0, 238, 255, 0.3);
-  border-radius: 10px;
-}
-
 .director-name:hover {
   animation: neon 1.5s infinite ease-in-out;
 }
@@ -202,7 +197,27 @@ label,
     text-shadow: 0 0 2px #fff, 0 0 11px #fff, 0 0 3px #fff, 0 0 12px #00eeff, 0 0 17px #00eeff, 0 0 8px #00eeff, 0 0 10px #00eeff, 0 0 30px #00eeff;
   }
 }
+.genre-name:hover {
+  animation: neon 1.5s infinite ease-in-out;
+}
 
+@keyframes neon {
+  0% {
+    text-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 3px #fff, 0 0 4px #00eeff, 0 0 17px #00eeff, 0 0 8px #00eeff, 0 0 20px #00eeff, 0 0 30px #00eeff;
+  }
+  33% {
+    text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 1px #fff, 0 0 2px #00eeff, 0 0 10px #00eeff, 0 0 4px #00eeff, 0 0 5px #00eeff, 0 0 7px #00eeff;
+  }
+  35% {
+    text-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 3px #fff, 0 0 4px #00eeff, 0 0 17px #00eeff, 0 0 8px #00eeff, 0 0 20px #00eeff, 0 0 30px #00eeff;
+  }
+  40% {
+    text-shadow: 0 0 3px #fff, 0 0 1px #fff, 0 0 3px #fff, 0 0 8px #00eeff, 0 0 1px #00eeff, 0 0 8px #00eeff, 0 0 20px #00eeff, 0 0 10px #00eeff;
+  }
+  100% {
+    text-shadow: 0 0 2px #fff, 0 0 11px #fff, 0 0 3px #fff, 0 0 12px #00eeff, 0 0 17px #00eeff, 0 0 8px #00eeff, 0 0 10px #00eeff, 0 0 30px #00eeff;
+  }
+}
 .actor-img {
   float: left;
   padding: 10px;
@@ -217,11 +232,6 @@ label,
   text-align: left;
   padding-left: 10px;
   border-left: 1px solid white;
-}
-
-.dates-container:hover {
-  box-shadow: 0 0 30px rgba(0, 238, 255, 0.3);
-  border-radius: 10px;
 }
 
 .actor-name:hover {

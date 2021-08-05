@@ -1,0 +1,23 @@
+.genre-name:hover {
+  animation: neon 1.5s infinite ease-in-out;
+  }
+  
+  @keyframes neon {
+    0% {
+      text-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 3px #fff, 0 0 4px #00eeff, 0 0 17px #00eeff, 0 0 8px #00eeff, 0 0 20px #00eeff, 0 0 30px #00eeff;
+    }
+    33% {
+      text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 1px #fff, 0 0 2px #00eeff, 0 0 10px #00eeff, 0 0 4px #00eeff, 0 0 5px #00eeff, 0 0 7px #00eeff;
+    }
+    35% {
+      text-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 3px #fff, 0 0 4px #00eeff, 0 0 17px #00eeff, 0 0 8px #00eeff, 0 0 20px #00eeff, 0 0 30px #00eeff;
+    }
+    40% {
+      text-shadow: 0 0 3px #fff, 0 0 1px #fff, 0 0 3px #fff, 0 0 8px #00eeff, 0 0 1px #00eeff, 0 0 8px #00eeff, 0 0 20px #00eeff, 0 0 10px #00eeff;
+    }
+    100% {
+      text-shadow: 0 0 2px #fff, 0 0 11px #fff, 0 0 3px #fff, 0 0 12px #00eeff, 0 0 17px #00eeff, 0 0 8px #00eeff, 0 0 10px #00eeff, 0 0 30px #00eeff;
+    }
+  }
+  
+  

@@ -49178,7 +49178,7 @@ try {
             columnNumber: 11
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
-          className: "aqua-text",
+          className: "aqua-text genre-name",
           __self: this,
           __source: {
             fileName: _jsxFileName,
