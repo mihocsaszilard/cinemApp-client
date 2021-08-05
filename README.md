@@ -1,6 +1,8 @@
 <h1>cinemApp Client</h1>
 
-[Site Preview](https://github.com/mihocsaszilard/cinemApp-client/blob/main/public/img/cinemApp-preview.png?raw=true)
+<p align="center">
+  <img src="./public/img/cinemApp-preview" title="site preview">
+</p>
 
 <h2>Objective</h2>
   <p>
