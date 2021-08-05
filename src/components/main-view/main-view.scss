@@ -48,7 +48,8 @@ $full-black: #000;
 
 .light-animation { 
   border-radius: 50%;
-  box-shadow: -50px -50px 500px rgba(255, 238, 0, 0.2);
+  box-shadow: 0 0 500px rgba(255, 238, 0, 0.2);
+  background-color: rgba(255, 238, 0, 0.09);
   width: 600px;
   height: 600px;
   position: fixed;
