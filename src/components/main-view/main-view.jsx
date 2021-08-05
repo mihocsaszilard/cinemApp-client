@@ -36,6 +36,9 @@ class MainView extends React.Component {
     this.state = {
       movies: [],
       user: null,
+      directors: [],
+      actors: [],
+      genres: [],
     };
   }
 
