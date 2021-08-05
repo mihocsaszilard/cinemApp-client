@@ -51556,7 +51556,50 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","react-bootstrap/Col":"2D0r8","react-redux":"7GDa4","../movie-card/movie-card":"7v6h3","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","../visibility-filter-input/visibility-filter-input":"3SRLP","react-bootstrap":"4n7hB"}],"7v6h3":[function(require,module,exports) {
+},{"react":"3b2NM","react-bootstrap/Col":"2D0r8","react-redux":"7GDa4","../visibility-filter-input/visibility-filter-input":"3SRLP","../movie-card/movie-card":"7v6h3","react-bootstrap":"4n7hB","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3SRLP":[function(require,module,exports) {
+var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  _parcelHelpers.defineInteropFlag(exports);
+  var _react = require("react");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactRedux = require("react-redux");
+  var _reactBootstrapForm = require("react-bootstrap/Form");
+  var _reactBootstrapFormDefault = _parcelHelpers.interopDefault(_reactBootstrapForm);
+  var _actionsActions = require("../../actions/actions");
+  var _jsxFileName = "C:\\Users\\mihoc\\careerfoundry\\cinemApp-client\\src\\components\\visibility-filter-input\\visibility-filter-input.jsx";
+  function VisibilityFilterInput(props) {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapFormDefault.default.Control, {
+        className: "text-center",
+        onChange: e => props.setFilter(e.target.value),
+        value: props.visibilityFilter,
+        placeholder: "Search",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10,
+          columnNumber: 5
+        }
+      })
+    );
+  }
+  _c = VisibilityFilterInput;
+  exports.default = _reactRedux.connect(null, {
+    setFilter: _actionsActions.setFilter
+  })(VisibilityFilterInput);
+  var _c;
+  $RefreshReg$(_c, "VisibilityFilterInput");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+
+},{"react":"3b2NM","react-redux":"7GDa4","react-bootstrap/Form":"6A5ko","../../actions/actions":"5S6cN","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"7v6h3":[function(require,module,exports) {
 var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -51674,50 +51717,7 @@ try {
 
 },{"react":"3b2NM","prop-types":"4dfy5","react-bootstrap":"4n7hB","react-router-dom":"1PMSK","../movie-card/movie-card.scss":"43n4t","url:../../../public/img/star.png":"2Nqz0","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"43n4t":[function() {},{}],"2Nqz0":[function(require,module,exports) {
 module.exports = require('./bundle-url').getBundleURL() + "star.e0a1c7a2.png"
-},{"./bundle-url":"3seVR"}],"3SRLP":[function(require,module,exports) {
-var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-helpers.prelude(module);
-try {
-  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
-  _parcelHelpers.defineInteropFlag(exports);
-  var _react = require("react");
-  var _reactDefault = _parcelHelpers.interopDefault(_react);
-  var _reactRedux = require("react-redux");
-  var _reactBootstrapForm = require("react-bootstrap/Form");
-  var _reactBootstrapFormDefault = _parcelHelpers.interopDefault(_reactBootstrapForm);
-  var _actionsActions = require("../../actions/actions");
-  var _jsxFileName = "C:\\Users\\mihoc\\careerfoundry\\cinemApp-client\\src\\components\\visibility-filter-input\\visibility-filter-input.jsx";
-  function VisibilityFilterInput(props) {
-    return (
-      /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapFormDefault.default.Control, {
-        className: "text-center",
-        onChange: e => props.setFilter(e.target.value),
-        value: props.visibilityFilter,
-        placeholder: "Search",
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 10,
-          columnNumber: 5
-        }
-      })
-    );
-  }
-  _c = VisibilityFilterInput;
-  exports.default = _reactRedux.connect(null, {
-    setFilter: _actionsActions.setFilter
-  })(VisibilityFilterInput);
-  var _c;
-  $RefreshReg$(_c, "VisibilityFilterInput");
-  helpers.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-
-},{"react":"3b2NM","react-redux":"7GDa4","react-bootstrap/Form":"6A5ko","../../actions/actions":"5S6cN","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"5iJih":[function() {},{}],"7panR":[function(require,module,exports) {
+},{"./bundle-url":"3seVR"}],"5iJih":[function() {},{}],"7panR":[function(require,module,exports) {
 "use strict";
 Object.defineProperty(exports, '__esModule', {
   value: true
