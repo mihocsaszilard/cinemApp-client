@@ -2,9 +2,6 @@
 
 ![](https://github.com/mihocsaszilard/cinemApp-client/blob/main/public/img/cinemApp-preview.PNG?raw=true)
 
-<p align="center">
-  <img src="../public/img/cinemApp-preview.PNG" title="site preview">
-</p>
 
 <h2>Objective</h2>
   <p>
