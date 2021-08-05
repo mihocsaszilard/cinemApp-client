@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 
 import { connect } from "react-redux";
-import { setMovies, setUsers } from "../../actions/actions";
+import { setMovies } from "../../actions/actions";
 import MoviesList from "../movies-list/movies-list";
 
 import { MovieView } from "../movie-view/movie-view";
