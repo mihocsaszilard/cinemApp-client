@@ -69,24 +69,28 @@ export class ProfileView extends React.Component {
       });
   }
 
-  removeFavouriteMovie() {
+  removeFromFavorites(movie) {
     const token = localStorage.getItem("token");
-    const username = localStorage.getItem("user");
+    const user = localStorage.getItem("user");
 
     axios
       .delete(
-        `https://cinemapp-backend.herokuapp.com/users/${username}/removeFromFav/${movie._id}`,
+        `https://cinemapp-backend.herokuapp.com/users/${user}/removeFromFav/${movie._id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
       )
-      .then(() => {
-        alert("Removed!");
+      .then((response) => {
+        alert("Movie removed!");
         this.componentDidMount();
       })
       .catch(function (error) {
         console.log(error);
       });
+  }
+
+  refreshPage() {
+    window.location.reload(false);
   }
 
   handleUpdate(
@@ -350,9 +354,9 @@ export class ProfileView extends React.Component {
                               className="remove-favorite w-50 px-6 m-auto mt-2 custom-remove"
                               variant="danger"
                               value={movie._id}
-                              onClick={(e) =>
-                                this.removeFavouriteMovie(e, movie)
-                              }
+                              onClick={() => {
+                                this.removeFromFavorites(movie);
+                              }}
                             >
                               Remove
                             </Button>
