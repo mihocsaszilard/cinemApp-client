@@ -41,3 +41,36 @@
     margin-bottom: 7px;
   }
 }
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .title-container {
+    .card-title {
+      font-size: 16px;
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .title-container {
+    .card-title {
+      font-size: 14px;
+      width: 50%;
+    }
+    .rating {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .title-container {
+    .card-title {
+      font-size: 24px;
+      width: 70%;
+    }
+    .rating {
+      font-size: 24px;
+    }
+  }
+}
