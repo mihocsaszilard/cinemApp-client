@@ -5,6 +5,7 @@ import {
   Route,
   Redirect,
   Link,
+  useHistory,
 } from "react-router-dom";
 
 import { connect } from "react-redux";
@@ -31,8 +32,9 @@ class MainView extends React.Component {
     this.state = {
       user: null,
       directors: [],
-      actors: [],
       genres: [],
+      actors: [],
+      selectedMovie: null,
     };
   }
 
@@ -48,6 +50,44 @@ class MainView extends React.Component {
       this.getGenres(accessToken);
       this.getActors(accessToken);
     }
+  }
+
+  /*When a movie is clicked, this function is invoked and updates 
+  the state of the `selectedMovie` *property to that movie*/
+  setSelectedMovie(movie) {
+    this.setState({
+      selectedMovie: movie,
+    });
+  }
+
+  onRegistration(user) {
+    this.setState({
+      user,
+    });
+  }
+
+  /* When a user successfully logs in, this function updates the
+   `user` property in state to that *particular user*/
+  onLoggedIn(authData) {
+    // console.log(authData);
+    this.setState({
+      user: authData.user.Username,
+    });
+    localStorage.setItem("token", authData.token);
+    localStorage.setItem("user", authData.user.Username);
+    this.getMovies(authData.token);
+    this.getDirectors(authData.token);
+    this.getGenres(authData.token);
+    this.getActors(authData.token);
+  }
+
+  onLoggedOut() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    <Redirect push to="/" />;
+    this.setState({
+      user: null,
+    });
   }
 
   getMovies(token) {
@@ -108,40 +148,6 @@ class MainView extends React.Component {
       .catch(function (error) {
         console.log(error);
       });
-  }
-
-  /*When a movie is clicked, this function is invoked and updates 
-  the state of the `selectedMovie` *property to that movie*/
-  setSelectedMovie(movie) {
-    this.setState({
-      selectedMovie: movie,
-    });
-  }
-
-  onRegistration(user) {
-    this.setState({
-      user,
-    });
-  }
-
-  /* When a user successfully logs in, this function updates the
-   `user` property in state to that *particular user*/
-  onLoggedIn(authData) {
-    console.log(authData);
-    this.setState({
-      user: authData.user.Username,
-    });
-    localStorage.setItem("token", authData.token);
-    localStorage.setItem("user", authData.user.Username);
-    this.getMovies(authData.token);
-  }
-
-  onLoggedOut() {
-    localStorage.removeItem("token");
-    localStorage.removeItem("user");
-    this.setState({
-      user: null,
-    });
   }
 
   render() {

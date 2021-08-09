@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import { Button, Card, Form, Col, Row, FloatingLabel } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
 import "./profile-view.scss";
-import AccordionItem from "react-bootstrap/esm/AccordionItem";
 
 export class ProfileView extends React.Component {
   constructor() {
