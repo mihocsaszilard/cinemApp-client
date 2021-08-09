@@ -26527,45 +26527,45 @@ try {
             lineNumber: 179,
             columnNumber: 15
           }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Nav.Link, {
           className: "custom-link mx-3",
-          to: `/`,
+          href: "/",
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 183,
             columnNumber: 17
           }
-        }, "Movies"), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        }, "Movies"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Nav.Link, {
           className: "custom-link mx-3",
-          to: `/directors`,
+          href: "/directors",
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 187,
             columnNumber: 17
           }
-        }, "Directors"), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        }, "Directors"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Nav.Link, {
           className: "custom-link mx-3",
-          to: `/genres`,
+          href: "/genres",
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 191,
             columnNumber: 17
           }
-        }, "Genres"), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        }, "Genres"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Nav.Link, {
           className: "custom-link mx-3",
-          to: `/actors`,
+          href: "/actors",
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 195,
             columnNumber: 17
           }
-        }, "Actors"), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        }, "Actors"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Nav.Link, {
           className: "custom-link mx-3",
-          to: `/users/:username`,
+          href: "/users/:username",
           __self: this,
           __source: {
             fileName: _jsxFileName,
@@ -27163,7 +27163,7 @@ try {
       super();
       this.state = {};
     }
-    addToFavorites(movie) {
+    addToFavorites() {
       const token = localStorage.getItem("token");
       const user = localStorage.getItem("user");
       _axiosDefault.default.post(`https://cinemApp-backend.herokuapp.com/users/${user}` + "/movies/" + this.props.movie._id, {}, {
@@ -49270,7 +49270,6 @@ try {
   var _propTypes = require("prop-types");
   var _propTypesDefault = _parcelHelpers.interopDefault(_propTypes);
   var _reactBootstrap = require("react-bootstrap");
-  require("react-router-dom");
   require("./actor-view.scss");
   var _jsxFileName = "C:\\Users\\mihoc\\careerfoundry\\cinemApp-client\\src\\components\\actor-view\\actor-view.jsx";
   class ActorView extends _reactDefault.default.Component {
@@ -49282,7 +49281,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 12,
+            lineNumber: 11,
             columnNumber: 7
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Row, {
@@ -49290,7 +49289,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 13,
+            lineNumber: 12,
             columnNumber: 9
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
@@ -49298,7 +49297,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 14,
+            lineNumber: 13,
             columnNumber: 11
           }
         }, actor.Name), /*#__PURE__*/_reactDefault.default.createElement("p", {
@@ -49306,21 +49305,21 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 15,
+            lineNumber: 14,
             columnNumber: 11
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("span", {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 16,
+            lineNumber: 15,
             columnNumber: 13
           }
         }, "Born: "), new Date(actor.Birth).toLocaleDateString())), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Row, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21,
+            lineNumber: 20,
             columnNumber: 9
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
@@ -49328,7 +49327,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22,
+            lineNumber: 21,
             columnNumber: 11
           }
         }, " ", /*#__PURE__*/_reactDefault.default.createElement("img", {
@@ -49337,7 +49336,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24,
+            lineNumber: 23,
             columnNumber: 13
           }
         }), /*#__PURE__*/_reactDefault.default.createElement("p", {
@@ -49345,7 +49344,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 25,
+            lineNumber: 24,
             columnNumber: 13
           }
         }, actor.Bio))))
@@ -49367,7 +49366,7 @@ try {
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","prop-types":"4dfy5","react-bootstrap":"4n7hB","./actor-view.scss":"3Jb5f","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f","react-router-dom":"1PMSK"}],"3Jb5f":[function() {},{}],"3CncI":[function(require,module,exports) {
+},{"react":"3b2NM","prop-types":"4dfy5","react-bootstrap":"4n7hB","./actor-view.scss":"3Jb5f","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"4Jj4f"}],"3Jb5f":[function() {},{}],"3CncI":[function(require,module,exports) {
 var helpers = require("../../../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -49875,61 +49874,42 @@ try {
             columnNumber: 15
           }
         }, movies.map(movie => {
-          if (movie._id === FavoriteMovies.find(m => m._id === movies._id)) {
-            return (
-              /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
-                className: "text-center justify-content-center",
-                key: movie._id,
-                __self: this,
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 337,
-                  columnNumber: 23
-                }
-              }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Row, {
-                className: " aqua-text",
-                __self: this,
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 341,
-                  columnNumber: 25
-                }
-              }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
-                className: "m-auto image-container-profile",
-                sm: 12,
-                md: 6,
-                lg: 5,
-                __self: this,
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 342,
-                  columnNumber: 27
-                }
-              }, /*#__PURE__*/_reactDefault.default.createElement("img", {
-                className: "w-100 m-auto mt-2",
-                src: movie.ImgPath,
-                __self: this,
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 348,
-                  columnNumber: 29
-                }
-              }), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Button, {
-                className: "remove-favorite w-50 px-6 m-auto mt-2 custom-remove",
-                variant: "danger",
-                value: movie._id,
-                onClick: () => {
-                  this.removeFromFavorites(movie);
-                },
-                __self: this,
-                __source: {
-                  fileName: _jsxFileName,
-                  lineNumber: 353,
-                  columnNumber: 29
-                }
-              }, "Remove"))))
-            );
-          }
+          if (movie._id === FavoriteMovies.find(m => m._id === movies._id)) return (
+            /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
+              key: movie._id,
+              className: "m-auto image-container-profile",
+              sm: 12,
+              md: 6,
+              lg: 5,
+              __self: this,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 337,
+                columnNumber: 23
+              }
+            }, /*#__PURE__*/_reactDefault.default.createElement("img", {
+              className: "w-75 m-auto mt-2",
+              src: movie.ImgPath,
+              __self: this,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 344,
+                columnNumber: 25
+              }
+            }), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Button, {
+              className: "remove-favorite w-50 px-6 m-auto mt-2 custom-remove",
+              variant: "danger",
+              onClick: () => {
+                this.removeFromFavorites(movie);
+              },
+              __self: this,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 346,
+                columnNumber: 25
+              }
+            }, "Remove"))
+          );
         }))))))
       );
     }

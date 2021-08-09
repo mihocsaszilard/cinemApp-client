@@ -332,39 +332,28 @@ export class ProfileView extends React.Component {
                   if (
                     movie._id ===
                     FavoriteMovies.find((m) => m._id === movies._id)
-                  ) {
+                  )
                     return (
                       <Col
-                        className="text-center justify-content-center"
                         key={movie._id}
+                        className="m-auto image-container-profile"
+                        sm={12}
+                        md={6}
+                        lg={5}
                       >
-                        <Row className=" aqua-text">
-                          <Col
-                            className="m-auto image-container-profile"
-                            sm={12}
-                            md={6}
-                            lg={5}
-                          >
-                            <img
-                              className="w-100 m-auto mt-2"
-                              src={movie.ImgPath}
-                            />
+                        <img className="w-75 m-auto mt-2" src={movie.ImgPath} />
 
-                            <Button
-                              className="remove-favorite w-50 px-6 m-auto mt-2 custom-remove"
-                              variant="danger"
-                              value={movie._id}
-                              onClick={() => {
-                                this.removeFromFavorites(movie);
-                              }}
-                            >
-                              Remove
-                            </Button>
-                          </Col>
-                        </Row>
+                        <Button
+                          className="remove-favorite w-50 px-6 m-auto mt-2 custom-remove"
+                          variant="danger"
+                          onClick={() => {
+                            this.removeFromFavorites(movie);
+                          }}
+                        >
+                          Remove
+                        </Button>
                       </Col>
                     );
-                  }
                 })}
               </div>
             </Accordion.Body>

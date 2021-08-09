@@ -12,7 +12,7 @@ export class MovieView extends React.Component {
     this.state = {};
   }
 
-  addToFavorites(movie) {
+  addToFavorites() {
     const token = localStorage.getItem("token");
     const user = localStorage.getItem("user");
     axios
