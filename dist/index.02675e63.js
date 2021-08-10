@@ -26527,7 +26527,7 @@ try {
             lineNumber: 179,
             columnNumber: 15
           }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Nav.Link, {
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
           className: "custom-link mx-3",
           href: "/",
           __self: this,
@@ -26536,7 +26536,7 @@ try {
             lineNumber: 183,
             columnNumber: 17
           }
-        }, "Movies"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Nav.Link, {
+        }, "Movies"), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
           className: "custom-link mx-3",
           href: "/directors",
           __self: this,
@@ -26545,7 +26545,7 @@ try {
             lineNumber: 187,
             columnNumber: 17
           }
-        }, "Directors"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Nav.Link, {
+        }, "Directors"), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
           className: "custom-link mx-3",
           href: "/genres",
           __self: this,
@@ -26554,7 +26554,7 @@ try {
             lineNumber: 191,
             columnNumber: 17
           }
-        }, "Genres"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Nav.Link, {
+        }, "Genres"), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
           className: "custom-link mx-3",
           href: "/actors",
           __self: this,
@@ -26563,7 +26563,7 @@ try {
             lineNumber: 195,
             columnNumber: 17
           }
-        }, "Actors"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Nav.Link, {
+        }, "Actors"), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
           className: "custom-link mx-3",
           href: "/users/:username",
           __self: this,
