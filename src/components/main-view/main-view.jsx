@@ -20,7 +20,7 @@ import { ActorView } from "../actor-view/actor-view";
 import { ProfileView } from "../profile-view/profile-view";
 import { RegistrationView } from "../registration-view/registration-view";
 
-import { Row, Col, Button, Navbar, Image } from "react-bootstrap";
+import { Row, Col, Button, Navbar, Nav, Image } from "react-bootstrap";
 import logo from "url:../../../public/img/CinemApp.png";
 
 import "./main-view.scss";
@@ -180,25 +180,25 @@ class MainView extends React.Component {
                 className="nav-elements"
                 id="basic-navbar-nav hamburger-button "
               >
-                <Link className="custom-link mx-3" to={`/`}>
+                <Nav.Link className="custom-link mx-3" href="/">
                   Movies
-                </Link>
+                </Nav.Link>
 
-                <Link className="custom-link mx-3" to={`/directors`}>
+                <Nav.Link className="custom-link mx-3" href="/directors">
                   Directors
-                </Link>
+                </Nav.Link>
 
-                <Link className="custom-link mx-3" to={`/genres`}>
+                <Nav.Link className="custom-link mx-3" href="/genres">
                   Genres
-                </Link>
+                </Nav.Link>
 
-                <Link className="custom-link mx-3" to={`/actors`}>
+                <Nav.Link className="custom-link mx-3" href="/actors">
                   Actors
-                </Link>
+                </Nav.Link>
 
-                <Link className="custom-link mx-3" to={`/users/:username`}>
+                <Nav.Link className="custom-link mx-3" href="/users/:username">
                   Profile
-                </Link>
+                </Nav.Link>
 
                 <Button
                   className="logout-button  mx-3"

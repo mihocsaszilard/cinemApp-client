@@ -197,13 +197,14 @@ export class ProfileView extends React.Component {
   render() {
     const { FavoriteMovies, validated } = this.state;
     const { movies } = this.props;
+    const username = localStorage.getItem("user");
 
     return (
       <Row className="profile-view d-flex ">
         <Accordion defaultActiveKey="0" className=" m-auto custom-accordion">
           <Accordion.Item className="full-black" eventKey="0">
             <Accordion.Header>
-              <h3 className="m-auto aqua-text">Update Profile</h3>
+              <h3 className="m-auto aqua-text">Update {username}`s Profile</h3>
             </Accordion.Header>
             <Accordion.Body className="full-black w-100">
               <Form

@@ -26527,45 +26527,45 @@ try {
             lineNumber: 179,
             columnNumber: 15
           }
-        }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Nav.Link, {
           className: "custom-link mx-3",
-          to: `/`,
+          href: "/",
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 183,
             columnNumber: 17
           }
-        }, "Movies"), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        }, "Movies"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Nav.Link, {
           className: "custom-link mx-3",
-          to: `/directors`,
+          href: "/directors",
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 187,
             columnNumber: 17
           }
-        }, "Directors"), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        }, "Directors"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Nav.Link, {
           className: "custom-link mx-3",
-          to: `/genres`,
+          href: "/genres",
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 191,
             columnNumber: 17
           }
-        }, "Genres"), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        }, "Genres"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Nav.Link, {
           className: "custom-link mx-3",
-          to: `/actors`,
+          href: "/actors",
           __self: this,
           __source: {
             fileName: _jsxFileName,
             lineNumber: 195,
             columnNumber: 17
           }
-        }, "Actors"), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        }, "Actors"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Nav.Link, {
           className: "custom-link mx-3",
-          to: `/users/:username`,
+          href: "/users/:username",
           __self: this,
           __source: {
             fileName: _jsxFileName,
@@ -49542,13 +49542,14 @@ try {
     render() {
       const {FavoriteMovies, validated} = this.state;
       const {movies} = this.props;
+      const username = localStorage.getItem("user");
       return (
         /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Row, {
           className: "profile-view d-flex ",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 202,
+            lineNumber: 203,
             columnNumber: 7
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapAccordionDefault.default, {
@@ -49557,7 +49558,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 203,
+            lineNumber: 204,
             columnNumber: 9
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapAccordionDefault.default.Item, {
@@ -49566,14 +49567,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 204,
+            lineNumber: 205,
             columnNumber: 11
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapAccordionDefault.default.Header, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 205,
+            lineNumber: 206,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
@@ -49581,15 +49582,15 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 206,
+            lineNumber: 207,
             columnNumber: 15
           }
-        }, "Update Profile")), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapAccordionDefault.default.Body, {
+        }, "Update ", username, "`s Profile")), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapAccordionDefault.default.Body, {
           className: "full-black w-100",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 208,
+            lineNumber: 209,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form, {
@@ -49600,14 +49601,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 209,
+            lineNumber: 210,
             columnNumber: 15
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Row, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 225,
+            lineNumber: 226,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
@@ -49616,7 +49617,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 226,
+            lineNumber: 227,
             columnNumber: 19
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form.Group, {
@@ -49625,7 +49626,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 227,
+            lineNumber: 228,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.FloatingLabel, {
@@ -49635,7 +49636,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 231,
+            lineNumber: 232,
             columnNumber: 23
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form.Control, {
@@ -49645,7 +49646,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 236,
+            lineNumber: 237,
             columnNumber: 25
           }
         }))), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form.Group, {
@@ -49654,7 +49655,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 244,
+            lineNumber: 245,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.FloatingLabel, {
@@ -49663,7 +49664,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 245,
+            lineNumber: 246,
             columnNumber: 23
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form.Control, {
@@ -49673,7 +49674,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 246,
+            lineNumber: 247,
             columnNumber: 25
           }
         }))), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form.Group, {
@@ -49682,7 +49683,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 254,
+            lineNumber: 255,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.FloatingLabel, {
@@ -49691,7 +49692,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 255,
+            lineNumber: 256,
             columnNumber: 23
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form.Control, {
@@ -49701,7 +49702,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 256,
+            lineNumber: 257,
             columnNumber: 25
           }
         })))), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
@@ -49710,7 +49711,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 264,
+            lineNumber: 265,
             columnNumber: 19
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form.Group, {
@@ -49719,7 +49720,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 265,
+            lineNumber: 266,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.FloatingLabel, {
@@ -49728,7 +49729,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 269,
+            lineNumber: 270,
             columnNumber: 23
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form.Control, {
@@ -49738,7 +49739,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 270,
+            lineNumber: 271,
             columnNumber: 25
           }
         }))), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form.Group, {
@@ -49747,7 +49748,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 278,
+            lineNumber: 279,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.FloatingLabel, {
@@ -49756,7 +49757,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 279,
+            lineNumber: 280,
             columnNumber: 23
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form.Control, {
@@ -49766,7 +49767,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 280,
+            lineNumber: 281,
             columnNumber: 25
           }
         }))), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form.Group, {
@@ -49775,7 +49776,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 288,
+            lineNumber: 289,
             columnNumber: 21
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.FloatingLabel, {
@@ -49784,7 +49785,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 289,
+            lineNumber: 290,
             columnNumber: 23
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Form.Control, {
@@ -49793,14 +49794,14 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 290,
+            lineNumber: 291,
             columnNumber: 25
           }
         }), " "))), " "), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Card.Body, {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 298,
+            lineNumber: 299,
             columnNumber: 17
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Button, {
@@ -49810,7 +49811,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 299,
+            lineNumber: 300,
             columnNumber: 19
           }
         }, "Update"), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Button, {
@@ -49820,7 +49821,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 306,
+            lineNumber: 307,
             columnNumber: 19
           }
         }, "Delete"))))), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapAccordionDefault.default.Item, {
@@ -49829,7 +49830,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 318,
+            lineNumber: 319,
             columnNumber: 11
           }
         }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapAccordionDefault.default.Header, {
@@ -49837,7 +49838,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 319,
+            lineNumber: 320,
             columnNumber: 13
           }
         }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
@@ -49845,7 +49846,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 320,
+            lineNumber: 321,
             columnNumber: 15
           }
         }, "Favorites")), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrapAccordionDefault.default.Body, {
@@ -49855,7 +49856,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 323,
+            lineNumber: 324,
             columnNumber: 13
           }
         }, FavoriteMovies.length === 0 && /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -49863,7 +49864,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 325,
+            lineNumber: 326,
             columnNumber: 17
           }
         }, "Your don`t have favorite movies yet!"), /*#__PURE__*/_reactDefault.default.createElement("div", {
@@ -49871,7 +49872,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 330,
+            lineNumber: 331,
             columnNumber: 15
           }
         }, movies.map(movie => {
@@ -49883,7 +49884,7 @@ try {
                 __self: this,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 337,
+                  lineNumber: 338,
                   columnNumber: 23
                 }
               }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Row, {
@@ -49891,7 +49892,7 @@ try {
                 __self: this,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 341,
+                  lineNumber: 342,
                   columnNumber: 25
                 }
               }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Col, {
@@ -49902,7 +49903,7 @@ try {
                 __self: this,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 342,
+                  lineNumber: 343,
                   columnNumber: 27
                 }
               }, /*#__PURE__*/_reactDefault.default.createElement("img", {
@@ -49911,7 +49912,7 @@ try {
                 __self: this,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 348,
+                  lineNumber: 349,
                   columnNumber: 29
                 }
               }), /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Button, {
@@ -49924,7 +49925,7 @@ try {
                 __self: this,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 353,
+                  lineNumber: 354,
                   columnNumber: 29
                 }
               }, "Remove"))))
