@@ -180,23 +180,26 @@ class MainView extends React.Component {
                 className="nav-elements"
                 id="basic-navbar-nav hamburger-button "
               >
-                <Nav.Link className="custom-link mx-3" href="/">
+                <Nav.Link className="custom-link mx-3" href={`/`}>
                   Movies
                 </Nav.Link>
 
-                <Nav.Link className="custom-link mx-3" href="/directors">
+                <Nav.Link className="custom-link mx-3" href={`/directors`}>
                   Directors
                 </Nav.Link>
 
-                <Nav.Link className="custom-link mx-3" href="/genres">
+                <Nav.Link className="custom-link mx-3" href={`/genres`}>
                   Genres
                 </Nav.Link>
 
-                <Nav.Link className="custom-link mx-3" href="/actors">
+                <Nav.Link className="custom-link mx-3" href={`/actors`}>
                   Actors
                 </Nav.Link>
 
-                <Nav.Link className="custom-link mx-3" href="/users/:username">
+                <Nav.Link
+                  className="custom-link mx-3"
+                  href={`/users/:username`}
+                >
                   Profile
                 </Nav.Link>
 
