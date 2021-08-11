@@ -28,12 +28,14 @@ label,
 }
 
 .logo {
-  opacity: 0;
+  display: grid;
+  grid-template-rows: 1fr;
+  width: 100px;
 }
-
 
 @media screen and (max-width: 400px){
   .logo {
-    display: none !important;
+    display: grid;
+    grid-template-rows: 1fr;
   }
 }

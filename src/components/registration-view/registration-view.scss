@@ -28,16 +28,15 @@ label,
 }
 
 .logo {
-  opacity: 0;
+  display: grid;
+  grid-template-rows: 1fr;
+  width: 100px;
 }
+
 
 @media screen and (max-width: 400px){
  
 .welcome-text-img {
     display: none;
   } 
-
-  .logo {
-    display: none;
-  }
 }

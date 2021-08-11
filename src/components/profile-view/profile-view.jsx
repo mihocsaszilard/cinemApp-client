@@ -175,7 +175,7 @@ export class ProfileView extends React.Component {
 
   handleDeleteUser(e) {
     e.preventDefault();
-
+    if (!confirm("Are you sure you want to delete your account?")) return;
     const token = localStorage.getItem("token");
     const username = localStorage.getItem("user");
 

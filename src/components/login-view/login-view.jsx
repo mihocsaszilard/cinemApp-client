@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 import {
   Form,
@@ -20,7 +20,8 @@ export function LoginView(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  let history = useHistory();
+  const { handleRegister } = props;
+  // let history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -39,19 +40,19 @@ export function LoginView(props) {
       });
   };
 
-  function handleClick() {
-    history.push("/register");
-  }
+  // function handleClick() {
+  //   history.push("{/register}");
+  // }
 
   return (
     <>
       <Container>
         <Col xs={12} md={8} lg={6} className="d-flex mx-auto">
           <Row className="d-flex mx-auto mt-5 justify-content-center">
-            <h3 className="text-center text-light">Welcome to cinemApp</h3>
-            <Image className="w-75 d-flex mx-auto mt-2 logo" src={logo} />
+            <h3 className="text-center mt-5 text-light">Welcome to</h3>
+            <Image className=" mt-2 logo" src={logo} />
 
-            <h2 className="text-center mt-3 text-light">Please login</h2>
+            <h2 className="text-center mt-5 text-light">Please login</h2>
             <Row>
               <Form className=" m-auto w-75 mt-3 full-black">
                 <Form.Group className="mb-3" controlId="formUsername">
@@ -87,23 +88,19 @@ export function LoginView(props) {
               </Form>
             </Row>
 
-            <Row
-              className=" text-center mt-5 text-light d-inline-block"
-              xs={12}
-              md={8}
-              lg={6}
-            >
-              <div className="d-inline-block mb-2 w-75 text-right">Or</div>
-              <Button
-                className="w-50 d-inline-block"
-                variant="success"
-                type="submit"
-                onClick={handleClick}
-              >
-                Register
-              </Button>
-              <div className="d-inline-block w-75 mt-2 text-right">now!</div>
-            </Row>
+            <Col className="mt-5 w-100 text-light d-flex" xs={12} md={8} lg={6}>
+              <div className="pt-2 d-flex m-auto">
+                Don't have an account?
+                <Button
+                  className="w-auto pb-2 py-0 d-flex"
+                  variant="link"
+                  type="submit"
+                  onClick={handleRegister}
+                >
+                  Sign Up
+                </Button>
+              </div>
+            </Col>
           </Row>
         </Col>
       </Container>

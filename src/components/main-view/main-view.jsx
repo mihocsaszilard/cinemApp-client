@@ -35,9 +35,11 @@ class MainView extends React.Component {
       genres: [],
       actors: [],
       selectedMovie: null,
+      hasAccount: true,
     };
   }
 
+  // Keeps user logged in
   componentDidMount() {
     let accessToken = localStorage.getItem("token"); //get the value of token from localStorage
     if (accessToken !== null) {
@@ -90,6 +92,7 @@ class MainView extends React.Component {
     });
   }
 
+  // Gets movies from API
   getMovies(token) {
     axios
       .get("https://cinemapp-backend.herokuapp.com/movies", {
@@ -103,6 +106,7 @@ class MainView extends React.Component {
       });
   }
 
+  // Gets directors from API
   getDirectors(token) {
     axios
       .get("https://cinemapp-backend.herokuapp.com/directors", {
@@ -120,6 +124,7 @@ class MainView extends React.Component {
       });
   }
 
+  // Gets genres from API
   getGenres(token) {
     axios
       .get("https://cinemapp-backend.herokuapp.com/genres", {
@@ -135,6 +140,7 @@ class MainView extends React.Component {
       });
   }
 
+  // Gets actors from API
   getActors(token) {
     axios
       .get("https://cinemapp-backend.herokuapp.com/actors", {
@@ -150,9 +156,37 @@ class MainView extends React.Component {
       });
   }
 
+  // Handler to navigate from LoginView to RegistrationView
+  handleRegister = () => {
+    this.setState({
+      hasAccount: false,
+    });
+  };
+
+  //Handler to navigate from RegistrationView to LoginView
+  handleLogin = () => {
+    this.setState({
+      hasAccount: true,
+    });
+  };
+
   render() {
-    let { user, directors, genres, actors } = this.state;
+    let { user, directors, genres, actors, hasAccount } = this.state;
     let { movies } = this.props;
+
+    // on LoginView, when 'New User Sign Up' is clicked, goes to ReistrationView
+    if (!hasAccount) return <RegistrationView handleLogin={this.handleLogin} />;
+
+    // Renders LoginView if no user
+    if (!user)
+      return (
+        <LoginView
+          onLoggedIn={(user) => this.onLoggedIn(user)}
+          handleRegister={this.handleRegister}
+        />
+      );
+
+    if (!movies) return <div className="main-view" />;
 
     return (
       <Router>
@@ -180,23 +214,23 @@ class MainView extends React.Component {
                 className="nav-elements"
                 id="basic-navbar-nav hamburger-button "
               >
-                <Link className="custom-link mx-3" href="/">
+                <Link className="custom-link mx-3" to={`/`}>
                   Movies
                 </Link>
 
-                <Link className="custom-link mx-3" href="/directors">
+                <Link className="custom-link mx-3" to={`/directors`}>
                   Directors
                 </Link>
 
-                <Link className="custom-link mx-3" href="/genres">
+                <Link className="custom-link mx-3" to={`/genres`}>
                   Genres
                 </Link>
 
-                <Link className="custom-link mx-3" href="/actors">
+                <Link className="custom-link mx-3" to={`/actors`}>
                   Actors
                 </Link>
 
-                <Link className="custom-link mx-3" href="/users/:username">
+                <Link className="custom-link mx-3" to={`/users/:username`}>
                   Profile
                 </Link>
 
