@@ -19,4 +19,364 @@ body {
   background: red;
   width: 2px;
 }
+.main-view {
+  text-align: center;
+}
+
+.card-container {
+  background-color: black !important;
+}
+
+.card-body {
+  background-color: black !important;
+}
+
+.card-img {
+  overflow: hidden;
+}
+
+.title-container {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), black);
+}
+.title-container .card-title {
+  font-size: 20px;
+  position: absolute;
+  bottom: 5%;
+  width: 70%;
+  text-align: left;
+  margin-left: 10px;
+}
+.title-container .rating {
+  position: absolute;
+  bottom: 0;
+  right: inherit;
+  text-align: right;
+  margin-right: 10px;
+}
+.title-container .star {
+  height: 24px;
+  margin-bottom: 7px;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .title-container .card-title {
+    font-size: 16px;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .title-container .card-title {
+    font-size: 14px;
+    width: 50%;
+  }
+  .title-container .rating {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .title-container .card-title {
+    font-size: 24px;
+    width: 70%;
+  }
+  .title-container .rating {
+    font-size: 24px;
+  }
+}
+.movie-poster {
+  box-shadow: 0 0 200px #161616;
+}
+.director-img {
+  float: left;
+  padding: 10px;
+  padding-bottom: 0;
+  transition: all 0.5s;
+}
+.director-img:hover {
+  transform: perspective(10cm) rotateX(-4deg) rotateY(10deg) scale(1.3);
+}
+
+.director-bio {
+  text-align: left;
+  padding-left: 10px;
+  border-left: 1px solid white;
+}
+
+.director-name:hover {
+  animation: neon 1.5s infinite ease-in-out;
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 3px #fff, 0 0 4px #00eeff, 0 0 17px #00eeff, 0 0 8px #00eeff, 0 0 20px #00eeff, 0 0 30px #00eeff;
+  }
+  33% {
+    text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 1px #fff, 0 0 2px #00eeff, 0 0 10px #00eeff, 0 0 4px #00eeff, 0 0 5px #00eeff, 0 0 7px #00eeff;
+  }
+  35% {
+    text-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 3px #fff, 0 0 4px #00eeff, 0 0 17px #00eeff, 0 0 8px #00eeff, 0 0 20px #00eeff, 0 0 30px #00eeff;
+  }
+  40% {
+    text-shadow: 0 0 3px #fff, 0 0 1px #fff, 0 0 3px #fff, 0 0 8px #00eeff, 0 0 1px #00eeff, 0 0 8px #00eeff, 0 0 20px #00eeff, 0 0 10px #00eeff;
+  }
+  100% {
+    text-shadow: 0 0 2px #fff, 0 0 11px #fff, 0 0 3px #fff, 0 0 12px #00eeff, 0 0 17px #00eeff, 0 0 8px #00eeff, 0 0 10px #00eeff, 0 0 30px #00eeff;
+  }
+}
+.genre-name:hover {
+  animation: neon 1.5s infinite ease-in-out;
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 3px #fff, 0 0 4px #00eeff, 0 0 17px #00eeff, 0 0 8px #00eeff, 0 0 20px #00eeff, 0 0 30px #00eeff;
+  }
+  33% {
+    text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 1px #fff, 0 0 2px #00eeff, 0 0 10px #00eeff, 0 0 4px #00eeff, 0 0 5px #00eeff, 0 0 7px #00eeff;
+  }
+  35% {
+    text-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 3px #fff, 0 0 4px #00eeff, 0 0 17px #00eeff, 0 0 8px #00eeff, 0 0 20px #00eeff, 0 0 30px #00eeff;
+  }
+  40% {
+    text-shadow: 0 0 3px #fff, 0 0 1px #fff, 0 0 3px #fff, 0 0 8px #00eeff, 0 0 1px #00eeff, 0 0 8px #00eeff, 0 0 20px #00eeff, 0 0 10px #00eeff;
+  }
+  100% {
+    text-shadow: 0 0 2px #fff, 0 0 11px #fff, 0 0 3px #fff, 0 0 12px #00eeff, 0 0 17px #00eeff, 0 0 8px #00eeff, 0 0 10px #00eeff, 0 0 30px #00eeff;
+  }
+}
+.actor-img {
+  float: left;
+  padding: 10px;
+  padding-bottom: 0;
+  transition: all 0.5s;
+}
+.actor-img:hover {
+  transform: perspective(10cm) rotateX(-4deg) rotateY(10deg) scale(1.3);
+}
+
+.actor-bio {
+  text-align: left;
+  padding-left: 10px;
+  border-left: 1px solid white;
+}
+
+.actor-name:hover {
+  animation: neon 1.5s infinite ease-in-out;
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 3px #fff, 0 0 4px #00eeff, 0 0 17px #00eeff, 0 0 8px #00eeff, 0 0 20px #00eeff, 0 0 30px #00eeff;
+  }
+  33% {
+    text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 1px #fff, 0 0 2px #00eeff, 0 0 10px #00eeff, 0 0 4px #00eeff, 0 0 5px #00eeff, 0 0 7px #00eeff;
+  }
+  35% {
+    text-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 3px #fff, 0 0 4px #00eeff, 0 0 17px #00eeff, 0 0 8px #00eeff, 0 0 20px #00eeff, 0 0 30px #00eeff;
+  }
+  40% {
+    text-shadow: 0 0 3px #fff, 0 0 1px #fff, 0 0 3px #fff, 0 0 8px #00eeff, 0 0 1px #00eeff, 0 0 8px #00eeff, 0 0 20px #00eeff, 0 0 10px #00eeff;
+  }
+  100% {
+    text-shadow: 0 0 2px #fff, 0 0 11px #fff, 0 0 3px #fff, 0 0 12px #00eeff, 0 0 17px #00eeff, 0 0 8px #00eeff, 0 0 10px #00eeff, 0 0 30px #00eeff;
+  }
+}
+.accordion-item .accordion-button {
+  background-color: #161616 !important;
+  border: 0;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.image-container-profile img {
+  opacity: 0.8;
+}
+
+.profile-view h3 {
+  border-bottom: 1px solid #fff;
+  width: 990px;
+}
+
+.custom-remove {
+  position: relative;
+  bottom: 250px;
+  opacity: 0.8;
+}
+.custom-remove:hover {
+  opacity: 1;
+}
+
+form input {
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .custom-accordion {
+    width: 100% !important;
+  }
+}
+*,
+body {
+  box-sizing: border-box;
+}
+
+form {
+  display: block;
+  text-align: center;
+  width: 300px;
+  margin: auto;
+  margin-top: 15%;
+  padding: 1.5%;
+  background-color: lavender;
+  border-radius: 10px;
+}
+
+label,
+.registerBtn {
+  display: block;
+  width: 200px;
+  margin: auto;
+  margin-top: 1%;
+}
+
+.registerBtn {
+  width: 100px;
+  margin-top: 2%;
+}
+
+.logo {
+  display: grid;
+  grid-template-rows: 1fr;
+  width: 100px;
+}
+
+@media screen and (max-width: 400px) {
+  .welcome-text-img {
+    display: none;
+  }
+}
+.movie-card-col {
+  max-height: 435px;
+  overflow: hidden;
+  z-index: 9;
+  transition: 0.4s ease-in-out;
+}
+.movie-card-col:hover, .movie-card-col:active {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.full-black {
+  background-color: #000;
+  z-index: 90;
+}
+
+.cinemapp-logo {
+  position: fixed;
+  left: 1%;
+  top: 0;
+  padding-top: 15px;
+  height: 64px;
+  width: 25%;
+  background-color: #000;
+  text-align: center;
+}
+
+.nav-elements {
+  box-shadow: 0px 0px 0px 13px #000;
+}
+
+.navbar-logo {
+  height: 30px;
+}
+
+.toggle-nav {
+  background-color: #000;
+  margin-left: 45vw;
+}
+
+.logout-button {
+  z-index: 1022;
+}
+
+.light-animation {
+  border-radius: 50%;
+  box-shadow: 0 0 500px rgba(255, 238, 0, 0.2);
+  background-color: rgba(255, 238, 0, 0.09);
+  width: 600px;
+  height: 600px;
+  position: fixed;
+  left: -10%;
+  bottom: -25%;
+  animation: slide 60s ease-in-out infinite alternate both;
+}
+
+@keyframes slide {
+  0% {
+    left: -10%;
+    bottom: -65%;
+  }
+  25% {
+    left: 100%;
+    bottom: -65%;
+  }
+  50% {
+    left: 100%;
+    bottom: 90%;
+  }
+  75% {
+    left: 100%;
+    bottom: -65%;
+  }
+  100% {
+    left: -10%;
+    bottom: -65%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .toggle-nav {
+    background-color: #000;
+    margin-left: 30vw;
+  }
+}
+@media screen and (max-width: 992px) {
+  .toggle-nav {
+    background-color: #000;
+    margin-left: 2%;
+  }
+
+  .light-animation {
+    display: none;
+  }
+}
+@media screen and (max-width: 990px) {
+  .cinemapp-logo {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 60px;
+    background-color: #000;
+  }
+
+  .nav-elements {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    width: 93vw;
+    margin-top: 2%;
+    padding-bottom: 15px;
+  }
+  .nav-elements .custom-link {
+    margin-bottom: 5px;
+    font-size: 35px;
+  }
+}
+
 /*# sourceMappingURL=index.c8b63128.css.map */
