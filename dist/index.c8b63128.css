@@ -52,9 +52,10 @@ body {
   margin-left: 10px;
 }
 .title-container .featured {
-  text-align: center;
+  display: grid;
+  place-items: center;
   width: 75px;
-  height: 20px;
+  height: 25px;
   background-color: #e7c818;
   color: black;
   border-radius: 0 5px 5px 0;

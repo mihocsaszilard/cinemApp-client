@@ -30,9 +30,10 @@
     margin-left: 10px;
   }
   .featured {
-    text-align: center;
+    display: grid;
+    place-items: center;
     width: 75px;
-    height: 20px;
+    height: 25px;
     background-color: rgb(231, 200, 24);
     color: black;
     border-radius: 0 5px 5px 0;
