@@ -20,7 +20,13 @@ export class MovieCard extends React.Component {
         </Card.Body>
         <Link to={`/movies/${movie._id}`}>
           <div className="title-container text-white">
-            <p className="card-title">{movie.Title}</p>
+            {movie.Featured ? (
+              <p className="card-title">
+                {movie.Title} <span className="featured">featured</span>
+              </p>
+            ) : (
+              <p className="card-title">{movie.Title}</p>
+            )}
             <p className="rating">
               {" "}
               <img className="star" src={star} /> {movie.Rating}
@@ -37,6 +43,7 @@ MovieCard.propTypes = {
     Title: PropTypes.string.isRequired,
     Rating: PropTypes.number.isRequired,
     ImgPath: PropTypes.string.isRequired,
+    Featured: PropTypes.bool.isRequired,
   }),
   // onMovieClick: PropTypes.func.isRequired,
 };

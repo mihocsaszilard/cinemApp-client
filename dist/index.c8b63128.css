@@ -46,10 +46,22 @@ body {
 .title-container .card-title {
   font-size: 20px;
   position: absolute;
-  bottom: 5%;
+  bottom: 4%;
   width: 70%;
   text-align: left;
   margin-left: 10px;
+}
+.title-container .featured {
+  text-align: center;
+  width: 75px;
+  height: 20px;
+  background-color: #e7c818;
+  color: black;
+  border-radius: 0 5px 5px 0;
+  font-size: 14px;
+  position: absolute;
+  left: -4%;
+  bottom: 100%;
 }
 .title-container .rating {
   position: absolute;
@@ -253,7 +265,7 @@ label,
 .logo {
   display: grid;
   grid-template-rows: 1fr;
-  width: 100px;
+  width: 300px;
 }
 
 @media screen and (max-width: 400px) {

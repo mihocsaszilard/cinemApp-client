@@ -24,10 +24,22 @@
   .card-title {
     font-size: 20px;
     position: absolute;
-    bottom: 5%;
+    bottom: 4%;
     width: 70%;
     text-align: left;
     margin-left: 10px;
+  }
+  .featured {
+    text-align: center;
+    width: 75px;
+    height: 20px;
+    background-color: rgb(231, 200, 24);
+    color: black;
+    border-radius: 0 5px 5px 0;
+    font-size: 14px;
+    position: absolute;
+    left: -4%;
+    bottom: 100%;
   }
   .rating {
     position: absolute;

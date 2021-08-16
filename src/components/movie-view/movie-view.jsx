@@ -109,5 +109,6 @@ MovieView.propTypes = {
     Genre: PropTypes.array.isRequired,
     Director: PropTypes.array.isRequired,
     Actors: PropTypes.array.isRequired,
+    Featured: PropTypes.bool.isRequired,
   }),
 };

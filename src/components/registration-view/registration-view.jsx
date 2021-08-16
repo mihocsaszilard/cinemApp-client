@@ -57,9 +57,9 @@ export function RegistrationView(props) {
   return (
     <>
       <Container>
-        <Col xs={12} md={8} lg={6} className="d-flex mx-auto">
+        <Col xs={12} md={8} lg={6} className="d-flex mt-md-5 mx-auto">
           <Row className="d-flex mx-auto mt-5 justify-content-center">
-            <Image className="mt-2 logo" src={logo} />
+            <Image className="mt-2 mt-5 logo" src={logo} />
 
             <Row>
               <Form className="full-black m-auto mt-3">

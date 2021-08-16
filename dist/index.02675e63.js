@@ -50490,20 +50490,36 @@ try {
             lineNumber: 22,
             columnNumber: 11
           }
-        }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+        }, movie.Featured ? /*#__PURE__*/_reactDefault.default.createElement("p", {
           className: "card-title",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23,
-            columnNumber: 13
+            lineNumber: 24,
+            columnNumber: 15
+          }
+        }, movie.Title, " ", /*#__PURE__*/_reactDefault.default.createElement("span", {
+          className: "featured",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 25,
+            columnNumber: 31
+          }
+        }, "featured")) : /*#__PURE__*/_reactDefault.default.createElement("p", {
+          className: "card-title",
+          __self: this,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 28,
+            columnNumber: 15
           }
         }, movie.Title), /*#__PURE__*/_reactDefault.default.createElement("p", {
           className: "rating",
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24,
+            lineNumber: 30,
             columnNumber: 13
           }
         }, " ", /*#__PURE__*/_reactDefault.default.createElement("img", {
@@ -50512,7 +50528,7 @@ try {
           __self: this,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 26,
+            lineNumber: 32,
             columnNumber: 15
           }
         }), " ", movie.Rating)), " "))
@@ -50523,7 +50539,8 @@ try {
     movieData: _propTypesDefault.default.shape({
       Title: _propTypesDefault.default.string.isRequired,
       Rating: _propTypesDefault.default.number.isRequired,
-      ImgPath: _propTypesDefault.default.string.isRequired
+      ImgPath: _propTypesDefault.default.string.isRequired,
+      Featured: _propTypesDefault.default.bool.isRequired
     })
   };
   helpers.postlude(module);
@@ -50869,7 +50886,8 @@ try {
       ImgPath: _propTypesDefault.default.string.isRequired,
       Genre: _propTypesDefault.default.array.isRequired,
       Director: _propTypesDefault.default.array.isRequired,
-      Actors: _propTypesDefault.default.array.isRequired
+      Actors: _propTypesDefault.default.array.isRequired,
+      Featured: _propTypesDefault.default.bool.isRequired
     })
   };
   helpers.postlude(module);
@@ -52071,7 +52089,7 @@ try {
         xs: 12,
         md: 8,
         lg: 6,
-        className: "d-flex mx-auto",
+        className: "d-flex mt-md-5 mx-auto",
         __self: this,
         __source: {
           fileName: _jsxFileName,
@@ -52087,7 +52105,7 @@ try {
           columnNumber: 11
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactBootstrap.Image, {
-        className: "mt-2 logo",
+        className: "mt-2 mt-5 logo",
         src: _urlPublicImgCinemApp2PngDefault.default,
         __self: this,
         __source: {
