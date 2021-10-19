@@ -58,5 +58,16 @@ and the movie rating<br>
 ● The application must contain a mix of class components and function components<br>
 ● The application may be hosted online<br>
 
-<h2></h2>
+<h2>Contact</h2>
+
+[<img align="left" alt="linkedin profile" width="25px" src="./public/img/linkedin.svg" />][linkedin]
+[<img align="left" alt="twitter profile" width="25px" src="./public/img/twitter.svg" />][twitter]
+[<img align="left" alt="portfolio website" width="25px" src="./public/img/website.svg" />][website]
+[<img align="left" alt="send me an email" width="25px" src="./public/img/mail.svg" />](mailto:mihocsa48@gmail.com)-> <mihocsa48@gmail.com>
+
+
+[linkedin]: https://www.linkedin.com/in/mihocsaszilard/
+[twitter]: https://twitter.com/MihocsaS
+[website]: https://mihocsaszilard.github.io/Portfolio-Website-CF/
+
 <h2></h2>
