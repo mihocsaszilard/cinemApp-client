@@ -18,7 +18,6 @@ export class ProfileView extends React.Component {
       Birth: null,
       FavoriteMovies: [],
       validated: null,
-      favorites: [],
     };
   }
 
@@ -93,15 +92,8 @@ export class ProfileView extends React.Component {
     window.location.reload(false);
   }
 
-  handleUpdate(
-    e,
-    newFirstName,
-    newLastName,
-    newUsername,
-    newPassword,
-    newEmail,
-    newBirth
-  ) {
+  handleUpdate = (e) => {
+    e.preventDefault();
     this.setState({
       validated: null,
     });
@@ -121,26 +113,30 @@ export class ProfileView extends React.Component {
     const username = localStorage.getItem("user");
 
     axios
-      .put(`https://cinemapp-backend.herokuapp.com/users/${username}`, {
-        headers: { Authorization: `Bearer ${token}` },
-        data: {
-          FirstName: newFirstName ? newFirstName : this.state.FirstName,
-          LastName: newLastName ? newLastName : this.state.LastName,
-          Username: newUsername ? newUsername : this.state.Username,
-          Password: newPassword ? newPassword : this.state.Password,
-          Email: newEmail ? newEmail : this.state.Email,
-          Birth: newBirth ? newBirth : this.state.Birth,
+      .put(
+        `https://cinemapp-backend.herokuapp.com/users/${username}`,
+        {
+          headers: { Authorization: `Bearer ${token}` },
         },
-      })
+        {
+          FirstName: this.state.FirstName,
+          LastName: this.state.LastName,
+          Username: this.state.Username,
+          Password: this.state.Password,
+          Email: this.state.Email,
+          Birth: this.state.Birth,
+        }
+      )
       .then((response) => {
+        const data = response.data;
         alert("Saved!");
         this.setState({
-          FirstName: response.data.FirstName,
-          LastName: response.data.LastName,
-          Username: response.data.Username,
-          Password: response.data.Password,
-          Email: response.data.Email,
-          Birth: response.data.Birth,
+          FirstName: data.FirstName,
+          LastName: data.LastName,
+          Username: data.Username,
+          Password: data.Password,
+          Email: data.Email,
+          Birth: data.Birth,
         });
         localStorage.setItem("user", this.state.Username);
         window.open(`/users/${username}`, "_self");
@@ -148,7 +144,7 @@ export class ProfileView extends React.Component {
       .catch(function (error) {
         console.log(error);
       });
-  }
+  };
   setFirstName(input) {
     this.FirstName = input;
   }
@@ -328,14 +324,16 @@ export class ProfileView extends React.Component {
                 </div>
               )}
 
-              <div className="d-flex justify-content-center ">
+              <Row className="d-flex justify-content-center">
                 {movies.map((movie) => {
                   if (
-                    movie._id ===
-                    FavoriteMovies.find((m) => m._id === movies._id)
+                    movie._id === FavoriteMovies.find((m) => m === movie._id)
                   ) {
                     return (
                       <Col
+                        sm={12}
+                        lg={6}
+                        xl={4}
                         className="text-center justify-content-center"
                         key={movie._id}
                       >
@@ -344,15 +342,15 @@ export class ProfileView extends React.Component {
                             className="m-auto image-container-profile"
                             sm={12}
                             md={6}
-                            lg={5}
                           >
                             <img
                               className="w-100 m-auto mt-2"
                               src={movie.ImgPath}
                             />
+                            <p>{movie.Title}</p>
 
                             <Button
-                              className="remove-favorite w-50 px-6 m-auto mt-2 custom-remove"
+                              className="remove-favorite w-50 px-6 mt-5 m-auto mt-2 custom-remove"
                               variant="danger"
                               value={movie._id}
                               onClick={() => {
@@ -367,7 +365,7 @@ export class ProfileView extends React.Component {
                     );
                   }
                 })}
-              </div>
+              </Row>
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
